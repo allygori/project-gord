@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/app/components/container";
 import Navbar from "@components/navbar";
-import ImageLogo from "@public/assets/img/logo/miruora.svg";
+// import ImageLogo from "@public/assets/img/logo/miruora.svg";
+import ImageLogo from "@public/assets/img/logo/ika-gorden.svg";
 import ConfigContext, { type ConfigContextType } from "@components/config";
 import SectionMainHero from "@components/sections/hero/main-hero";
 import SectionCategory from "@components/sections/home/category";
@@ -39,7 +40,7 @@ export default function Home() {
         <Container className="mx-auto flex h-full w-11/12 flex-wrap items-center justify-between xl:w-10/12">
           <Link
             href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
+            className="flex items-center space-x-2 rtl:space-x-reverse"
           >
             <Image
               src={ImageLogo}
@@ -47,7 +48,7 @@ export default function Home() {
               width={32}
               height={32}
             />
-            <span className="self-center whitespace-nowrap text-xl font-semibold text-brand-100 xl:text-2xl">
+            <span className="ml-0 self-center whitespace-nowrap text-xl font-semibold uppercase text-brand-100 xl:text-2xl">
               Ika Gorden
             </span>
           </Link>

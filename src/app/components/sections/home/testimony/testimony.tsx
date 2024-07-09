@@ -29,7 +29,7 @@ const Testimony = ({ className = "" }: Props) => {
                 background: "linear-gradient(120deg, #f2f623 0%, #f2f623 100%)",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "50% 20%",
-                backgroundPosition: "10% 90%",
+                backgroundPosition: "25% 90%",
               }}
             >
               Testimoni
