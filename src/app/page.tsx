@@ -10,7 +10,10 @@ import ConfigContext, { type ConfigContextType } from "@components/config";
 import SectionMainHero from "@components/sections/hero/main-hero";
 import SectionCategory from "@components/sections/home/category";
 import SectionBenefits from "@components/sections/home/benefits";
+import SectionScopeOfWork from "@/app/components/sections/home/scope-of-work";
+import SectionPortfolio from "@components/sections/home/portfolio";
 import SectionTestimony from "@components/sections/home/testimony";
+import SectionContact from "@components/sections/home/contact";
 
 export default function Home() {
   const { layout } = useContext(ConfigContext) as ConfigContextType;
@@ -44,7 +47,7 @@ export default function Home() {
               width={32}
               height={32}
             />
-            <span className="self-center whitespace-nowrap text-2xl font-semibold text-brand-100">
+            <span className="self-center whitespace-nowrap text-xl font-semibold text-brand-100 xl:text-2xl">
               Ika Gorden
             </span>
           </Link>
@@ -52,25 +55,34 @@ export default function Home() {
         </Container>
       </header>
       <main className="min-h-screen w-full">
-        {/* section: hero */}
+        {/* section:hero */}
         <SectionMainHero />
 
-        {/* section: category */}
+        {/* section:category */}
         <SectionCategory className="mb-8" />
 
-        {/* section: benefits */}
+        {/* section:benefits */}
         <Container as="section" className="mb-8 w-11/12 xl:w-10/12">
           <SectionBenefits as="div" />
         </Container>
 
-        {/* section: testimony */}
-        <SectionTestimony className="mb-8" />
+        {/* section:scope */}
+        <SectionScopeOfWork className="flex items-start bg-brand-200 px-8 py-12" />
+
+        {/* section:portfolio */}
+        <SectionPortfolio className="py-12" />
+
+        {/* section:testimony */}
+        <SectionTestimony className="mb-0" />
+
+        {/* section:contact */}
+        <SectionContact />
       </main>
-      <footer className="bg-brand-95 m-0">
-        <Container className="bg-brand-95 flex w-11/12 flex-col py-5 xl:w-10/12 xl:flex-row xl:py-12">
+      <footer className="m-0 bg-brand-95">
+        <Container className="flex w-11/12 flex-col bg-brand-95 py-5 xl:w-10/12 xl:flex-row xl:py-12">
           <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
-            <h3 className="text-base text-white">Alamat</h3>
-            <address className="text-xs not-italic text-white">
+            <h3 className="text-base text-white xl:text-lg">Alamat</h3>
+            <address className="text-sm not-italic text-white md:text-sm">
               Jalan Graha Mitra Citra blok K 13 no.3 <br />
               Kelurahan Panongan, Kecamatan Panongan, <br />
               Jalan Citra Raya Boulevard, Cikupa, Kabupaten Tangerang, Banten
@@ -78,16 +90,16 @@ export default function Home() {
             </address>
           </div>
           <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
-            <h3 className="text-base text-white">Kontak</h3>
-            <p className="text-xs text-white">+62 895-3261-63269</p>
+            <h3 className="text-base text-white xl:text-lg">Kontak</h3>
+            <p className="text-sm text-white md:text-sm">+62 895-3261-63269</p>
           </div>
           <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
-            <h3 className="text-base text-white">Jam Operasional</h3>
-            <p className="text-xs text-white">Senin-Minggu</p>
-            <p className="text-xs text-white">06:00 - 21.30</p>
+            <h3 className="text-base text-white xl:text-lg">Jam Operasional</h3>
+            <p className="text-sm text-white md:text-sm">Senin-Minggu</p>
+            <p className="text-sm text-white md:text-sm">06:00 - 21.30</p>
           </div>
         </Container>
-        <Container className="bg-brand-95 w-11/12 py-5 xl:w-10/12">
+        <Container className="w-11/12 bg-brand-95 py-5 xl:w-10/12">
           <p className="text-center text-xs text-white">
             © Copyright {year} IKA Gorden All Rights Reserved
           </p>

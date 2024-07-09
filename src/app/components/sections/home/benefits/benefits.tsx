@@ -12,7 +12,7 @@ const Benefits = ({ as = "section", className = "" }: Props) => {
 
   return (
     <Component className={className}>
-      <h2 className="my-12 text-center text-3xl font-medium text-brand-100">
+      <h2 className="my-12 text-center text-xl font-medium text-brand-100 xl:text-3xl">
         <span
           style={{
             background: "linear-gradient(120deg, #f2f623 0%, #f2f623 100%)",

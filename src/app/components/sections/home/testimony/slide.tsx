@@ -65,7 +65,7 @@ const Slide = ({}: Props) => {
             <div className="flex h-full flex-col bg-brand-100 px-12 py-16">
               <div className="flex flex-col items-center justify-center">
                 <p
-                  className="mb-10 text-center text-base text-white xl:text-lg"
+                  className="mb-10 text-center text-sm text-white xl:text-lg"
                   dangerouslySetInnerHTML={{ __html: item.description }}
                 />
                 {/* star */}
@@ -79,7 +79,7 @@ const Slide = ({}: Props) => {
                     <Image src={item.photo} alt={item.name} />
                   </div>
                   <div className="ml-3 flex w-full flex-col justify-start">
-                    <p className="text-left text-lg text-white xl:text-xl">
+                    <p className="text-left text-base text-white xl:text-xl">
                       {item.name}
                     </p>
                     <span className="block h-1 w-6/12 bg-brand-500 opacity-50 xl:w-8/12" />

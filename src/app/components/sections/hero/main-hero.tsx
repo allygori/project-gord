@@ -31,7 +31,7 @@ const MainHero = () => {
       }}
     >
       <Container className="flex w-full flex-row items-center justify-center xl:w-10/12 xl:justify-start">
-        <div className="flex h-screen w-11/12 flex-col items-start justify-center md:-translate-y-32 xl:w-5/12 xl:-translate-y-16">
+        <div className="flex h-screen w-11/12 flex-col items-start justify-center md:-translate-y-32 xl:w-5/12 xl:-translate-y-4">
           <h1 className="text-3xl font-bold leading-snug text-brand-100 xl:text-4xl">
             Gorden Murah Dan Berkualitas Untuk Setiap Rumah & Kantor
           </h1>
@@ -42,7 +42,7 @@ const MainHero = () => {
 
           <PeopleReview />
 
-          <ButtonWA1 className="">Konsultasi Gratis</ButtonWA1>
+          <ButtonWA1 className="uppercase">KONSULTASI GRATIS</ButtonWA1>
         </div>
         {/* <div>Text HERE 2</div> */}
       </Container>

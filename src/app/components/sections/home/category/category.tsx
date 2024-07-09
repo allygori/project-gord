@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Image from "next/image";
 import Container from "@components/container";
 import IconCatCurtain from "@components/icons/cat-curtain";
 import IconCatVitrase from "@components/icons/cat-vitrase";
@@ -31,7 +30,10 @@ const Category = ({ className = "" }: Props) => {
               Vitrase
             </h3>
             <p className="text-sm text-brand-100">
-              Gorden tipis yang digunakan sebagai pelapis.....
+              Gorden ini membawa masuk banyak cahaya alami, tapi tetap dapat
+              menjaga privasi. Membuat rumah tampak lebih segar dan cerah, cocok
+              digunakan untuk ruang tamu atau kamar yang ingin terlihat lebih
+              lega dan adem.
             </p>
           </li>
           <li className="flex flex-1 flex-col items-center justify-start p-4 text-center xl:p-8">

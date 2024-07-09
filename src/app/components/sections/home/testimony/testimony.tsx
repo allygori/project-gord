@@ -23,12 +23,12 @@ const Testimony = ({ className = "" }: Props) => {
       <Container className="xl:px-32 xl:py-24">
         {/* section:title */}
         <div className="flex w-full flex-col items-center justify-center bg-brand-100 py-10">
-          <h2 className="w-3/12 text-center text-3xl font-medium text-white">
+          <h2 className="w-3/12 text-center text-xl font-medium text-white xl:text-3xl">
             <span
               style={{
                 background: "linear-gradient(120deg, #f2f623 0%, #f2f623 100%)",
                 backgroundRepeat: "no-repeat",
-                backgroundSize: "50% 25%",
+                backgroundSize: "50% 20%",
                 backgroundPosition: "10% 90%",
               }}
             >

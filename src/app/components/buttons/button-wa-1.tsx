@@ -20,7 +20,7 @@ const ButtonWA1 = ({ children, className = "" }: Props) => {
     >
       {/* bg-[#29af3e] */}
       <IconWA className="mr-1 h-4 w-4 text-white md:mr-2 md:h-5 md:w-5" />
-      <span className="inline-block text-xs font-semibold uppercase text-white md:text-sm lg:text-sm xl:text-base">
+      <span className="inline-block text-xs font-semibold text-white md:text-sm lg:text-sm xl:text-base">
         {children}
       </span>
     </Link>
