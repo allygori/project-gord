@@ -1,5 +1,7 @@
 import type { ElementType, ReactNode } from "react";
+import { useContext } from "react";
 import Link from "next/link";
+import ConfigContext, { type ConfigContextType } from "@components/config";
 
 type Props = {
   as?: string;
@@ -17,14 +19,20 @@ const NavbarItemMobile = ({
   className = "",
 }: Props) => {
   const Component = as as ElementType;
+  const { setShowMobileNav } = useContext(ConfigContext) as ConfigContextType;
+
+  const handleClick = () => {
+    setShowMobileNav(false);
+  };
 
   return (
     <Component className={className}>
       <Link
         href={href}
-        className="block px-3 py-2 text-brand-100"
+        className="block w-full py-2 text-brand-100"
         aria-current="page"
         scroll={scroll}
+        onClick={handleClick}
       >
         {children}
       </Link>

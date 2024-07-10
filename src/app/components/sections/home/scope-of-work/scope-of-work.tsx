@@ -45,7 +45,7 @@ const ScopeOfWork = ({ as = "section", className = "" }: Props) => {
             style={{
               background: "linear-gradient(120deg, #f2f623 0%, #f2f623 100%)",
               backgroundRepeat: "no-repeat",
-              backgroundSize: "50% 25%",
+              backgroundSize: "40% 25%",
               backgroundPosition: "10% 90%",
             }}
           >

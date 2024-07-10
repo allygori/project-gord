@@ -1,28 +1,35 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Container from "@components/container";
 import { MENUS } from "./menus.constant";
 import IconArrowBottom from "@components/icons/arrow-bottom";
+import ImageLogo from "@public/assets/img/logo/logo.svg";
 import NavbarItemMobile from "./navbar-item-mobile";
 import NavbarItemDesktop from "./navbar-item-desktop";
+import ConfigContext, { type ConfigContextType } from "@components/config";
 
 type Props = {
   className?: string;
 };
 
 const Navbar = ({ className = "" }: Props) => {
-  const [showMenu, setShowMenu] = useState(false);
+  const { show_mobile_nav, setShowMobileNav } = useContext(
+    ConfigContext,
+  ) as ConfigContextType;
 
   const handleOpen = () => {
-    setShowMenu(true);
+    setShowMobileNav(true);
   };
 
   useEffect(() => {
-    if (showMenu) {
+    if (show_mobile_nav) {
       document.body.style.overflow = "hidden";
       return () => {
         document.body.style.overflow = "scroll";
       };
     }
-  }, [showMenu]);
+  }, [show_mobile_nav]);
 
   return (
     <nav className={className}>
@@ -69,36 +76,56 @@ const Navbar = ({ className = "" }: Props) => {
           </ul>
         </div>
         {/* nav:mobile */}
-        {showMenu ? (
+        {show_mobile_nav ? (
           <div
-            className="absolute left-0 top-0 min-h-screen w-full bg-brand-200 md:hidden md:w-auto"
+            className="absolute left-0 top-0 min-h-screen w-full bg-brand-200 py-4 md:hidden md:w-auto"
             id="navbar-dropdown"
           >
-            {/* button:close */}
-            <div className="flex w-full flex-row justify-end">
-              <button
-                type="button"
-                className="inline-flex p-4 text-2xl text-brand-100"
-                onClick={() => {
-                  setShowMenu(false);
-                }}
+            <Container className="mx-auto mb-2 flex h-full w-11/12 flex-wrap items-center justify-between xl:w-10/12">
+              <Link
+                href="/"
+                className="flex items-center space-x-2 rtl:space-x-reverse"
               >
-                &times;
-              </button>
-            </div>
-            <ul className="m-0 p-0">
-              {MENUS.map((item, idx) => {
-                return (
-                  <NavbarItemMobile
-                    key={idx}
-                    href={item.href}
-                    scroll={item.scroll}
-                  >
-                    {item.label}
-                  </NavbarItemMobile>
-                );
-              })}
-            </ul>
+                <Image
+                  src={ImageLogo}
+                  alt="Ika Gorden Logo"
+                  width={32}
+                  height={32}
+                />
+                <span className="ml-0 self-center whitespace-nowrap text-xl font-semibold uppercase text-brand-100 xl:text-2xl">
+                  Ika Gorden
+                </span>
+              </Link>
+              {/* button:close */}
+              <div>
+                <button
+                  type="button"
+                  className="flex items-center justify-center text-4xl text-brand-100"
+                  onClick={() => {
+                    setShowMobileNav(false);
+                  }}
+                >
+                  &times;
+                </button>
+              </div>
+            </Container>
+
+            <Container className="mx-auto flex h-full w-11/12 flex-col flex-wrap">
+              <ul className="m-0 p-0">
+                {MENUS.map((item, idx) => {
+                  return (
+                    <NavbarItemMobile
+                      key={idx}
+                      href={item.href}
+                      scroll={item.scroll}
+                      className=""
+                    >
+                      {item.label}
+                    </NavbarItemMobile>
+                  );
+                })}
+              </ul>
+            </Container>
           </div>
         ) : null}
       </div>

@@ -20,7 +20,7 @@ import SectionTestimony from "@components/sections/home/testimony";
 import SectionContact from "@components/sections/home/contact";
 
 export default function Home() {
-  const { layout } = useContext(ConfigContext) as ConfigContextType;
+  const { header_height } = useContext(ConfigContext) as ConfigContextType;
   const [scroll, setScroll] = useState(false);
   const year = new Date().getFullYear();
 
@@ -28,17 +28,24 @@ export default function Home() {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 10);
     });
+
+    return () => {
+      window.removeEventListener("scroll", () => {
+        setScroll(window.scrollY > 10);
+      });
+    };
   });
 
   return (
     <>
+      {/* header */}
       <header
         className={`dark:border-gray-70 fixed start-0 top-0 z-20 w-full ${
           scroll
             ? `animate-fade-in-down border-b border-gray-200 bg-white`
             : "bg-transparent py-4"
         }`}
-        style={{ height: layout.header.height }}
+        style={{ height: header_height }}
       >
         <Container className="mx-auto flex h-full w-11/12 flex-wrap items-center justify-between xl:w-10/12">
           <Link
@@ -58,6 +65,8 @@ export default function Home() {
           <Navbar />
         </Container>
       </header>
+
+      {/* main */}
       <main className="min-h-screen w-full">
         {/* section:hero */}
         <SectionMainHero />
@@ -82,6 +91,8 @@ export default function Home() {
         {/* section:contact */}
         <SectionContact />
       </main>
+
+      {/* footer */}
       <footer className="m-0 bg-brand-95">
         <Container className="flex w-11/12 flex-col bg-brand-95 py-5 xl:w-10/12 xl:flex-row xl:py-12">
           <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">

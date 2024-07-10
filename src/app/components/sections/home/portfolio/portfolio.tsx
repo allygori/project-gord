@@ -1,11 +1,7 @@
 import clsx from "clsx";
-import Image from "next/image";
 import Container from "@components/container";
 import PortfolioSlide from "./portfolio-slide";
-import PortfolioSlideCards from "./portfolio-slide-cards";
 import { ButtonWA1 } from "@components/buttons";
-import { PORTFOLIOS } from "./portfolio.constant";
-import Image8 from "@public/assets/img/portfolios/image-08.jpg";
 
 type Props = {
   className?: string;
@@ -32,11 +28,10 @@ const Portfolio = ({ className = "" }: Props) => {
             Kami Memberikan Produk dan Pelayanan Terbaik
           </p>
           <p className="mb-4 text-left text-sm text-brand-100 xl:text-base">
-            Sebagai penyedia layanan gorden terkemuka, kami memiliki portofolio
-            yang membuktikan kualitas dan kepercayaan yang kami berikan kepada
-            ratusan pelanggan setia kami. Dari proyek-proyek berskala kecil
-            hingga besar, kami selalu memberikan hasil terbaik yang memuaskan
-            kebutuhan setiap pelanggan kami.
+            Kami memiliki portofolio yang membuktikan kualitas dan kepercayaan
+            yang kami terima dari ratusan pelanggan kami. Dari proyek-proyek
+            berskala kecil hingga besar, kami selalu memberikan hasil terbaik
+            yang memuaskan kebutuhan setiap pelanggan kami.
           </p>
           <p className="mb-6 text-left text-sm text-brand-100 xl:text-base">
             Tim kami siap membantu Anda menemukan gorden impian Anda dan
@@ -44,13 +39,13 @@ const Portfolio = ({ className = "" }: Props) => {
             Konsultasikan sekarang.
           </p>
 
-          {/* <div className="block mb-4 md:hidden">
+          <div className="relative mb-4 block after:absolute after:bottom-5 after:left-5 after:h-full after:w-full after:overflow-hidden after:rounded-lg after:bg-brand-200 md:hidden">
             <PortfolioSlide />
-          </div> */}
-
-          <div className="relative mb-4 block md:hidden">
-            <Image src={Image8} alt={`Alt Tex`} />
           </div>
+
+          {/* <div className="relative mb-4 block md:hidden">
+            <Image src={Image8} alt={`Alt Tex`} />
+          </div> */}
 
           <ButtonWA1 className="uppercase">KONSULTASI GRATIS</ButtonWA1>
         </Container>
@@ -72,10 +67,12 @@ const Portfolio = ({ className = "" }: Props) => {
         })} */}
         <div>
           {/* <span className="block h-20 w-full bg-brand-100" /> */}
-          <div className="relative">
+          {/* <div className="relative">
             <Image src={Image8} alt={`Alt Tex`} />
+          </div> */}
+          <div className="relative mb-4 hidden after:absolute after:right-10 after:top-10 after:h-full after:w-full after:overflow-hidden after:rounded-lg after:bg-brand-200 md:block">
+            <PortfolioSlide />
           </div>
-          {/* <PortfolioSlide /> */}
         </div>
         {/* <PortfolioSlideCards /> */}
       </div>

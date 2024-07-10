@@ -8,20 +8,26 @@ import { ButtonWA1 } from "@components/buttons";
 import PeopleReview from "./people-review";
 
 const MainHero = () => {
-  const { layout } = useContext(ConfigContext) as ConfigContextType;
+  const { header_height } = useContext(ConfigContext) as ConfigContextType;
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 10);
     });
+
+    return () => {
+      window.removeEventListener("scroll", () => {
+        setScroll(window.scrollY > 10);
+      });
+    };
   });
 
   return (
     <section
       className={`min-h-screen min-w-full bg-[#edeae7]`}
       style={{
-        padding: scroll ? "0px" : `${layout.header.height}px 0px`,
+        padding: scroll ? "0px" : `${header_height}px 0px`,
         backgroundImage: `url(${BackgroundImage.src})`,
         backgroundPosition: "center top",
         backgroundRepeat: "no-repeat",
