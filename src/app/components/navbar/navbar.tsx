@@ -57,7 +57,11 @@ const Navbar = ({ className = "" }: Props) => {
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900">
             {MENUS.map((item, idx) => {
               return (
-                <NavbarItemDesktop key={idx} href={item.href}>
+                <NavbarItemDesktop
+                  key={idx}
+                  href={item.href}
+                  scroll={item.scroll}
+                >
                   {item.label}
                 </NavbarItemDesktop>
               );
@@ -85,7 +89,11 @@ const Navbar = ({ className = "" }: Props) => {
             <ul className="m-0 p-0">
               {MENUS.map((item, idx) => {
                 return (
-                  <NavbarItemMobile key={idx} href={item.href}>
+                  <NavbarItemMobile
+                    key={idx}
+                    href={item.href}
+                    scroll={item.scroll}
+                  >
                     {item.label}
                   </NavbarItemMobile>
                 );

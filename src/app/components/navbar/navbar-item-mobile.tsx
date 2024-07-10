@@ -4,14 +4,16 @@ import Link from "next/link";
 type Props = {
   as?: string;
   children?: ReactNode;
-  className?: string;
   href?: string;
+  scroll?: boolean;
+  className?: string;
 };
 
 const NavbarItemMobile = ({
   as = "li",
   children,
   href = "/",
+  scroll = false,
   className = "",
 }: Props) => {
   const Component = as as ElementType;
@@ -22,6 +24,7 @@ const NavbarItemMobile = ({
         href={href}
         className="block px-3 py-2 text-brand-100"
         aria-current="page"
+        scroll={scroll}
       >
         {children}
       </Link>

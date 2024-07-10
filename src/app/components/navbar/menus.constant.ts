@@ -5,10 +5,12 @@ export const MENUS = [
   },
   {
     label: "Tentang Kami",
-    href: "/#about-us",
+    href: "#contact",
+    scroll: true,
   },
   {
     label: "Testimoni",
-    href: "/#testimony",
+    href: "#testimony",
+    scroll: true,
   },
 ];

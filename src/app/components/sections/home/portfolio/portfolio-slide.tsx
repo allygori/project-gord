@@ -23,14 +23,9 @@ const PortfolioSlide = ({}: Props) => {
   return (
     <Swiper
       ref={mainSwiperRef}
-      modules={[Autoplay, FreeMode, Pagination, Thumbs]}
+      modules={[FreeMode, Pagination, Thumbs]}
       spaceBetween={0}
-      autoplay={{
-        delay: 1000,
-        disableOnInteraction: true,
-        pauseOnMouseEnter: true,
-      }}
-      loop={true}
+      loop={false}
       navigation={false}
       centeredSlides={false}
       grabCursor={true}
@@ -44,11 +39,15 @@ const PortfolioSlide = ({}: Props) => {
             className={`${styles["ovveride-height"]} ${styles["ovveride-width"]}`}
           >
             <div className="h-auto">
-              <div className="relative aspect-auto h-[500px] w-auto">
+              {/* after:absolute after:bottom-0 after:left-0 after:h-[150px] after:w-full after:bg-gradient-to-t after:from-white after:to-transparent */}
+              <div className="relative aspect-auto h-[500px] w-full">
                 <Image
                   src={item.photo}
                   alt={`${item.text}-${idx}`}
-                  style={{ objectFit: "contain" }}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
             </div>

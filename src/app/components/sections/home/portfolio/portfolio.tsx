@@ -30,14 +30,14 @@ const Portfolio = ({ className = "" }: Props) => {
           <p className="mb-4 text-left text-2xl text-brand-95 xl:text-4xl">
             Kami Memberikan Produk dan Pelayanan Terbaik
           </p>
-          <p className="mb-4 text-left text-base text-brand-100">
+          <p className="mb-4 text-left text-sm text-brand-100 xl:text-base">
             Sebagai penyedia layanan gorden terkemuka, kami memiliki portofolio
             yang membuktikan kualitas dan kepercayaan yang kami berikan kepada
             ratusan pelanggan setia kami. Dari proyek-proyek berskala kecil
             hingga besar, kami selalu memberikan hasil terbaik yang memuaskan
             kebutuhan setiap pelanggan kami.
           </p>
-          <p className="mb-6 text-left text-base text-brand-100">
+          <p className="mb-6 text-left text-sm text-brand-100 xl:text-base">
             Tim kami siap membantu Anda menemukan gorden impian Anda dan
             memastikan proses pembelian berjalan lancar dari awal hingga akhir.
             Konsultasikan sekarang.

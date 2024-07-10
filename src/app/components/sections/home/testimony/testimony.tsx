@@ -4,12 +4,14 @@ import Slide from "./slide";
 import BackgroundImage from "@public/assets/img/nathan-fertig-FBXuXp57eM0-unsplash.jpg";
 
 type Props = {
+  id?: string;
   className?: string;
 };
 
-const Testimony = ({ className = "" }: Props) => {
+const Testimony = ({ id = "testimony", className = "" }: Props) => {
   return (
     <section
+      id={id}
       className={clsx("bg-brand-100", className)}
       style={{
         backgroundImage: `url(${BackgroundImage.src})`,

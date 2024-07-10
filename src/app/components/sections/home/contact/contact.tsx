@@ -1,16 +1,16 @@
 import clsx from "clsx";
-import Image from "next/image";
-import ImagePattern from "@public/assets/img/patterns/pattern-01.png";
 import Container from "@components/container";
 import { ButtonWA1 } from "@components/buttons";
 
 type Props = {
+  id?: string;
   className?: string;
 };
 
-const Contact = ({ className = "" }: Props) => {
+const Contact = ({ id = "contact", className = "" }: Props) => {
   return (
     <section
+      id={id}
       className={clsx("py-12 xl:py-14", className)}
       style={{
         backgroundColor: "#e8f7f6",
@@ -27,7 +27,7 @@ const Contact = ({ className = "" }: Props) => {
             <br />
             rumah atau kantor Anda
           </h2>
-          <p className="mb-8">
+          <p className="mb-8 text-sm xl:text-base">
             Dapatkan diskon menarik untuk pemesanan gorden di wilayah
             Jabodebtabek. Tunggu apalagi, Konsultasikan sekarang.
           </p>
