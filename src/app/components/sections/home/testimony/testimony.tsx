@@ -39,6 +39,7 @@ const Testimony = ({ id = "testimony", className = "" }: Props) => {
           </h2>
         </div>
         <Slide />
+        <span className="block w-full bg-brand-100 pb-5" />
       </Container>
     </section>
   );

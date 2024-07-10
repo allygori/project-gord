@@ -3,32 +3,26 @@
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import "swiper/css/thumbs";
 import "swiper/css/autoplay";
 import styles from "./slide.module.css";
 
-import { useState, useRef } from "react";
+import type { CSSProperties } from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
-import { Autoplay, FreeMode, Pagination, Thumbs } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { REVIEWS } from "./reviews.constant";
 import Rating from "./rating";
 
 type Props = {};
 
 const Slide = ({}: Props) => {
-  const mainSwiperRef = useRef<SwiperRef>(null);
-  const thumbsSwiperRef = useRef<SwiperRef>(null);
-  const [mainRealIndex, setMainRealIndex] = useState<number>(0);
-  const [mainPreviousRealIndex, setMainPreviousRealIndex] = useState<number>(0);
-
-  const onMainActiveIndexChange = (realIndex: number) => {};
-
   return (
     <Swiper
-      ref={mainSwiperRef}
-      modules={[Autoplay, FreeMode, Pagination, Thumbs]}
+      modules={[Autoplay, FreeMode, Pagination]}
       spaceBetween={0}
+      pagination={{
+        dynamicBullets: true,
+      }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: true,
@@ -39,25 +33,11 @@ const Slide = ({}: Props) => {
       centeredSlides={false}
       grabCursor={true}
       autoHeight={false}
-      // thumbs={{ swiper: thumbsSwiper }}
-      // pagination={{
-      //   type: "fraction",
-      //   renderFraction(currentClass, totalClass) {
-      //     return `
-      //     <div class="bg-white/75 text-center text-xs text-gray-800 px-1 py-0.5 border border-gray-300 rounded-md inline-flex opacity-90">
-      //       <span class="${currentClass}"></span> / <span class="${totalClass}"></span>
-      //     </div>
-      //   `;
-      //   },
-      // }}
-      // className={`${styles["swiper-ovveride"]}`}
-      // style={
-      //   {
-      //     "--swiper-navigation-color": "#fff",
-      //     "--swiper-pagination-color": "#fff",
-      //   } as CSSProperties
-      // }
-      onSlideChange={(swiper) => onMainActiveIndexChange(swiper.realIndex)}
+      style={
+        {
+          "--swiper-pagination-color": "#fff",
+        } as CSSProperties
+      }
     >
       {REVIEWS.map((item, idx) => {
         return (

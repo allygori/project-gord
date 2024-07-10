@@ -7,6 +7,8 @@ import Container from "@/app/components/container";
 import Navbar from "@components/navbar";
 // import ImageLogo from "@public/assets/img/logo/miruora.svg";
 import ImageLogo from "@public/assets/img/logo/logo.svg";
+import ImageLogoWithTextWhite from "@public/assets/img/logo/logo-with-text-white.png";
+// import IconLogoWithTextAside from "@components/icons/logo-with-text-aside";
 // import ImageLogo from "@public/assets/img/logo/logo-with-text.svg";
 import ConfigContext, { type ConfigContextType } from "@components/config";
 import SectionMainHero from "@components/sections/hero/main-hero";
@@ -83,22 +85,37 @@ export default function Home() {
       <footer className="m-0 bg-brand-95">
         <Container className="flex w-11/12 flex-col bg-brand-95 py-5 xl:w-10/12 xl:flex-row xl:py-12">
           <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
-            <h3 className="text-base text-white xl:text-lg">Alamat</h3>
-            <address className="text-sm not-italic text-white md:text-sm">
-              Jalan Graha Mitra Citra blok K 13 no.3 <br />
-              Kelurahan Panongan, Kecamatan Panongan, <br />
-              Jalan Citra Raya Boulevard, Cikupa, Kabupaten Tangerang, Banten
-              15711.
-            </address>
+            {/* <IconLogoWithTextAside className="h-48 w-auto text-white" /> */}
+            <div>
+              <Image
+                src={ImageLogoWithTextWhite}
+                alt="Ika Gorden Logo Footer"
+                height={32}
+                className="mb-2.5 xl:mb-3"
+              />
+              <p className="text-xs text-white xl:text-sm">
+                IKA Gorden menerima berbagai macam pembuatan gorden custom
+                sesuai permintaan pelanggan, diantaranya gorden blackout,
+                vitrase, vertical blind, horizontal blind, roller blind dan
+                pembuatan interior lainnya.
+              </p>
+            </div>
           </div>
           <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
             <h3 className="text-base text-white xl:text-lg">Kontak</h3>
-            <p className="text-sm text-white md:text-sm">+62 895-3261-63269</p>
+            <p className="text-xs text-white md:text-sm">+62 895-3261-63269</p>
           </div>
           <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
-            <h3 className="text-base text-white xl:text-lg">Jam Operasional</h3>
-            <p className="text-sm text-white md:text-sm">Senin-Minggu</p>
-            <p className="text-sm text-white md:text-sm">06:00 - 21.30</p>
+            <h3 className="text-base text-white xl:text-lg">Alamat</h3>
+            <address className="mb-2 text-xs not-italic text-white md:text-sm">
+              Jalan Graha Mitra Citra blok K 13 no.3 Kelurahan Panongan,
+              Kecamatan Panongan, <br />
+              Jalan Citra Raya Boulevard, Cikupa, Kabupaten Tangerang, Banten
+              15711.
+            </address>
+            <h3 className="text-sm text-white xl:text-base">Jam Operasional</h3>
+            <p className="text-xs text-white md:text-sm">Senin-Minggu</p>
+            <p className="text-xs text-white md:text-sm">06:00 - 21.30</p>
           </div>
         </Container>
         <Container className="w-11/12 bg-brand-95 py-5 xl:w-10/12">

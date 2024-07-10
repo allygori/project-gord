@@ -40,15 +40,8 @@ const PortfolioSlide = ({}: Props) => {
           >
             <div className="h-auto">
               {/* after:absolute after:bottom-0 after:left-0 after:h-[150px] after:w-full after:bg-gradient-to-t after:from-white after:to-transparent */}
-              <div className="relative aspect-auto h-[500px] w-full">
-                <Image
-                  src={item.photo}
-                  alt={`${item.text}-${idx}`}
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  style={{ width: "100%", height: "auto" }}
-                />
+              <div className="relative">
+                <Image src={item.photo} alt={`${item.text}-${idx}`} />
               </div>
             </div>
           </SwiperSlide>

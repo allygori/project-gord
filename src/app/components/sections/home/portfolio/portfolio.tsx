@@ -5,6 +5,7 @@ import PortfolioSlide from "./portfolio-slide";
 import PortfolioSlideCards from "./portfolio-slide-cards";
 import { ButtonWA1 } from "@components/buttons";
 import { PORTFOLIOS } from "./portfolio.constant";
+import Image8 from "@public/assets/img/portfolios/image-08.jpg";
 
 type Props = {
   className?: string;
@@ -43,8 +44,12 @@ const Portfolio = ({ className = "" }: Props) => {
             Konsultasikan sekarang.
           </p>
 
-          <div className="blcok mb-4 md:hidden">
+          {/* <div className="block mb-4 md:hidden">
             <PortfolioSlide />
+          </div> */}
+
+          <div className="relative mb-4 block md:hidden">
+            <Image src={Image8} alt={`Alt Tex`} />
           </div>
 
           <ButtonWA1 className="uppercase">KONSULTASI GRATIS</ButtonWA1>
@@ -65,7 +70,13 @@ const Portfolio = ({ className = "" }: Props) => {
             </div>
           );
         })} */}
-        <PortfolioSlide />
+        <div>
+          {/* <span className="block h-20 w-full bg-brand-100" /> */}
+          <div className="relative">
+            <Image src={Image8} alt={`Alt Tex`} />
+          </div>
+          {/* <PortfolioSlide /> */}
+        </div>
         {/* <PortfolioSlideCards /> */}
       </div>
     </section>
