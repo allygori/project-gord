@@ -1,16 +1,18 @@
 "use client";
 
 import "swiper/css";
+import "swiper/css/autoplay";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
+import "swiper/css/navigation";
+
 // import styles from "./portfolio-slide.module.css";
 
 import type { CSSProperties } from "react";
 import { useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import { Autoplay, FreeMode, Navigation, Pagination } from "swiper/modules";
 import { PORTFOLIOS } from "./portfolio.constant";
 
 type Props = {};
@@ -23,7 +25,7 @@ const PortfolioSlide = ({}: Props) => {
   return (
     <Swiper
       ref={mainSwiperRef}
-      modules={[Autoplay, FreeMode, Pagination]}
+      modules={[Autoplay, FreeMode, Navigation, Pagination]}
       slidesPerView={1}
       spaceBetween={0}
       autoplay={{
@@ -35,7 +37,7 @@ const PortfolioSlide = ({}: Props) => {
         dynamicBullets: true,
       }}
       loop={false}
-      navigation={false}
+      navigation={true}
       centeredSlides={true}
       grabCursor={true}
       autoHeight={false}
@@ -43,7 +45,8 @@ const PortfolioSlide = ({}: Props) => {
       className="overflow-hidden rounded-lg"
       style={
         {
-          "--swiper-pagination-color": "#fff",
+          "--swiper-pagination-color": "rgba(255, 255, 255, 0.75)",
+          "--swiper-navigation-color": "rgba(255, 255, 255, 0.5)",
         } as CSSProperties
       }
     >

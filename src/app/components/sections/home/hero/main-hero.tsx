@@ -27,7 +27,7 @@ const MainHero = () => {
     <section
       className={`min-h-screen min-w-full bg-[#edeae7]`}
       style={{
-        padding: scroll ? "0px" : `${header_height}px 0px`,
+        // padding: scroll ? "0px" : `${header_height}px 0px`,
         backgroundImage: `url(${BackgroundImage.src})`,
         backgroundPosition: "center top",
         backgroundRepeat: "no-repeat",
@@ -36,8 +36,8 @@ const MainHero = () => {
         height: "100%",
       }}
     >
-      <Container className="flex w-full flex-row items-center justify-center xl:w-10/12 xl:justify-start">
-        <div className="flex h-screen w-11/12 flex-col items-start justify-center md:-translate-y-32 xl:w-5/12 xl:-translate-y-4">
+      <Container className="flex w-full flex-row items-center justify-center md:w-11/12 md:justify-start lg:w-11/12 lg:justify-start xl:w-10/12 xl:justify-start">
+        <div className="flex h-screen w-11/12 flex-col items-start justify-center md:w-8/12 lg:w-5/12 xl:w-5/12">
           <h1 className="text-3xl font-bold leading-snug text-brand-100 xl:text-4xl">
             Gorden Murah Dan Berkualitas Untuk Setiap Rumah & Kantor
           </h1>

@@ -27,54 +27,29 @@ const Portfolio = ({ className = "" }: Props) => {
           <p className="mb-4 text-left text-2xl text-brand-95 xl:text-4xl">
             Kami Memberikan Produk dan Pelayanan Terbaik
           </p>
-          <p className="mb-4 text-left text-sm text-brand-100 xl:text-base">
+          <p className="mb-8 text-left text-sm text-brand-100 md:mb-8 xl:text-base">
             Kami memiliki portofolio yang membuktikan kualitas dan kepercayaan
-            yang kami terima dari ratusan pelanggan kami. Dari proyek-proyek
-            berskala kecil hingga besar, kami selalu memberikan hasil terbaik
-            yang memuaskan kebutuhan setiap pelanggan kami.
+            yang kami terima dari ratusan pelanggan kami. Dari proyek berskala
+            kecil hingga besar, kami memberikan hasil terbaik untuk memenenuhi
+            kebutuhan setiap pelanggan kami.
           </p>
-          <p className="mb-6 text-left text-sm text-brand-100 xl:text-base">
+          {/* <p className="mb-6 text-left text-sm text-brand-100 xl:text-base">
             Tim kami siap membantu Anda menemukan gorden impian Anda dan
             memastikan proses pembelian berjalan lancar dari awal hingga akhir.
             Konsultasikan sekarang.
-          </p>
+          </p> */}
 
-          <div className="relative mb-4 block after:absolute after:bottom-5 after:left-5 after:h-full after:w-full after:overflow-hidden after:rounded-lg after:bg-brand-200 md:hidden">
+          <div className="relative mb-4 block after:absolute after:bottom-5 after:left-5 after:h-full after:w-full after:overflow-hidden after:rounded-lg after:bg-brand-200 xl:hidden">
             <PortfolioSlide />
           </div>
-
-          {/* <div className="relative mb-4 block md:hidden">
-            <Image src={Image8} alt={`Alt Tex`} />
-          </div> */}
 
           <ButtonWA1 className="uppercase">KONSULTASI GRATIS</ButtonWA1>
         </Container>
       </div>
-      <div className="hidden w-full md:block xl:w-6/12">
-        {/* {PORTFOLIOS.map((item, idx) => {
-          return (
-            <div key={idx} className="h-auto">
-              <div className="relative aspect-auto h-[500px] w-auto">
-                <Image
-                  src={item.photo}
-                  alt={`${item.text}-${idx}`}
-                  style={{ objectFit: "contain" }}
-                  fill={true}
-                />
-              </div>
-            </div>
-          );
-        })} */}
-        <div>
-          {/* <span className="block h-20 w-full bg-brand-100" /> */}
-          {/* <div className="relative">
-            <Image src={Image8} alt={`Alt Tex`} />
-          </div> */}
-          <div className="relative mb-4 hidden after:absolute after:right-10 after:top-10 after:h-full after:w-full after:overflow-hidden after:rounded-lg after:bg-brand-200 md:block">
-            <PortfolioSlide />
-          </div>
+      <div className="hidden w-full xl:block xl:w-6/12">
+        <div className="relative mb-4 hidden after:absolute after:right-10 after:top-10 after:h-full after:w-full after:overflow-hidden after:rounded-lg after:bg-brand-200 xl:block">
+          <PortfolioSlide />
         </div>
-        {/* <PortfolioSlideCards /> */}
       </div>
     </section>
   );

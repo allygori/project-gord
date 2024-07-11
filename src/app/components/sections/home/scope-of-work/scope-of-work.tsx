@@ -53,7 +53,7 @@ const ScopeOfWork = ({ as = "section", className = "" }: Props) => {
           </span>
         </h2>
 
-        <ul className="m-0 grid grid-cols-1 gap-2 p-0 xl:grid-cols-2 xl:gap-4">
+        <ul className="m-0 grid grid-cols-1 gap-2 p-0 md:grid-cols-2 md:gap-4 lg:grid-cols-2 lg:gap-4 xl:grid-cols-2 xl:gap-4">
           {SCOPES.map((item, idx) => {
             return (
               <li key={idx} className="flex flex-row">

@@ -21,7 +21,7 @@ const Benefits = ({ as = "section", className = "" }: Props) => {
             backgroundPosition: "10% 90%",
           }}
         >
-          Kami Memberikan yang Terbaik
+          Kenapa harus IKA Gorden?
         </span>
       </h2>
 
