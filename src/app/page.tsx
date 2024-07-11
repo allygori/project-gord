@@ -11,7 +11,7 @@ import ImageLogoWithTextWhite from "@public/assets/img/logo/logo-with-text-white
 // import IconLogoWithTextAside from "@components/icons/logo-with-text-aside";
 // import ImageLogo from "@public/assets/img/logo/logo-with-text.svg";
 import ConfigContext, { type ConfigContextType } from "@components/config";
-import SectionMainHero from "@components/sections/hero/main-hero";
+import SectionMainHero from "@/app/components/sections/home/hero";
 import SectionCategory from "@components/sections/home/category";
 import SectionBenefits from "@components/sections/home/benefits";
 import SectionScopeOfWork from "@/app/components/sections/home/scope-of-work";
@@ -95,9 +95,9 @@ export default function Home() {
       {/* footer */}
       <footer className="m-0 bg-brand-95">
         <Container className="flex w-11/12 flex-col bg-brand-95 py-5 xl:w-10/12 xl:flex-row xl:py-12">
-          <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
+          <div className="mb-4 mr-0 w-full xl:mb-0 xl:mr-4 xl:w-5/12">
             {/* <IconLogoWithTextAside className="h-48 w-auto text-white" /> */}
-            <div>
+            <div className="w-full xl:w-10/12">
               <Image
                 src={ImageLogoWithTextWhite}
                 alt="Ika Gorden Logo Footer"
