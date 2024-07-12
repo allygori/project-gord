@@ -10,6 +10,10 @@ const config: Config = {
     extend: {
       animation: {
         "fade-in-down": "fadeInDown 0.5s ease-out",
+        "accordion-slide-down":
+          "accordionSlideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)",
+        "accordion-slide-up":
+          "accordionSlideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -39,9 +43,17 @@ const config: Config = {
             transform: "translateY(0)",
           },
         },
+        accordionSlideDown: {
+          from: { height: "0" },
+          to: { height: "var(--allygory-accordion-content-height)" },
+        },
+        accordionSlideUp: {
+          from: { height: "var(--allygory-accordion-content-height)" },
+          to: { height: "0" },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require("@allygory/with-tailwind")()],
 };
 export default config;

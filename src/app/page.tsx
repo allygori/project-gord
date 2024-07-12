@@ -5,20 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/app/components/container";
 import Navbar from "@components/navbar";
-// import ImageLogo from "@public/assets/img/logo/miruora.svg";
 import ImageLogo from "@public/assets/img/logo/logo.svg";
 import ImageLogoWithTextWhite from "@public/assets/img/logo/logo-with-text-white.png";
-// import IconLogoWithTextAside from "@components/icons/logo-with-text-aside";
-// import ImageLogo from "@public/assets/img/logo/logo-with-text.svg";
 import ConfigContext, { type ConfigContextType } from "@components/config";
 import SectionMainHero from "@/app/components/sections/home/hero";
 import SectionNumbers from "@components/sections/home/numbers";
-import SectionCategory from "@components/sections/home/category";
+// import SectionCategory from "@components/sections/home/category";
 import SectionBenefits from "@components/sections/home/benefits";
 import SectionScopeOfWork from "@/app/components/sections/home/scope-of-work";
 import SectionPortfolio from "@components/sections/home/portfolio";
 import SectionTestimony from "@components/sections/home/testimony";
 import SectionContact from "@components/sections/home/contact";
+import SectionFaq from "@components/sections/home/faq";
 
 export default function Home() {
   const { header_height } = useContext(ConfigContext) as ConfigContextType;
@@ -88,6 +86,9 @@ export default function Home() {
 
         {/* section:portfolio */}
         <SectionPortfolio className="py-12" />
+
+        {/* section:faq */}
+        <SectionFaq />
 
         {/* section:testimony */}
         <SectionTestimony className="mb-0" />
