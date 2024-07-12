@@ -22,13 +22,16 @@ const config: Config = {
       },
       colors: {
         // "brand-100": "#006466",
+        "brand-90": "#0b7ba8",
         "brand-95": "#053548",
         "brand-100": "#053b50",
         "brand-200": "#e8f7f6",
         "brand-300": "#d9d9d9",
         "brand-400": "#f7f7f7",
         "brand-500": "#f2f623",
-        "brand-600": "#FFF8E3",
+        "brand-590": "#ffffe6", // yellow pastel
+        "brand-595": "#FFFED3", // yellow pastel
+        "brand-600": "#FFF8E3", // yellow
       },
       fontSize: {
         "2xs": ["0.65rem", "0.825rem"],

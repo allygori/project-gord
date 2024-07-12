@@ -43,14 +43,14 @@ const Accordion = ({ className = "", faqs = [] }: Props) => {
               >
                 <div
                   className={clsx(
-                    "w-full border-b border-gray-500",
+                    "w-full border-b border-[#dadce0]",
                     "flex flex-row",
                     "pb-2",
                   )}
                 >
                   <IconArrowBottom2
                     className={clsx(
-                      "mr-2 h-5 w-5 shrink-0 text-gray-500 ease-in-out",
+                      "mr-2 h-5 w-5 shrink-0 text-[#b1b3b5] ease-in-out",
                       "group-allygory-state-open:rotate-180 group-allygory-state-open:duration-300",
                     )}
                   />

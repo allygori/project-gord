@@ -44,7 +44,7 @@ type Props = {
 const Category2 = ({ className = "" }: Props) => {
   return (
     <section className={clsx("bg-brand-200 py-8 md:py-10 lg:py-12", className)}>
-      <Container className="w-11/12 md:w-10/12">
+      <Container className="w-11/12 lg:w-10/12">
         <h2 className="mb-6 text-center text-xl font-medium text-brand-100 xl:mb-12 xl:text-3xl">
           <span
             style={{
@@ -57,7 +57,7 @@ const Category2 = ({ className = "" }: Props) => {
             Produk
           </span>
         </h2>
-        <ul className="m-0 grid grid-cols-1 gap-2 p-0 xl:grid-cols-3 xl:gap-4">
+        <ul className="m-0 grid grid-cols-1 gap-2 p-0 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-4">
           {CATEGORIES.map((item, idx) => {
             return (
               <li key={idx} className="mb-2 flex w-full flex-col items-center">

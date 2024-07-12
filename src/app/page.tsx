@@ -18,6 +18,7 @@ import SectionPortfolio from "@components/sections/home/portfolio";
 import SectionTestimony from "@components/sections/home/testimony";
 import SectionContact from "@components/sections/home/contact";
 import SectionFaq from "@components/sections/home/faq";
+import SectionSteps from "@components/sections/home/steps";
 
 export default function Home() {
   const { header_height } = useContext(ConfigContext) as ConfigContextType;
@@ -90,6 +91,9 @@ export default function Home() {
 
         {/* section:portfolio */}
         <SectionPortfolio className="py-12" />
+
+        {/* section:steps */}
+        <SectionSteps />
 
         {/* section:faq */}
         <SectionFaq />

@@ -13,7 +13,7 @@ const Faq = ({ className = "" }: Props) => {
 
   return (
     <section className={clsx("py-8", className)}>
-      <Container className="w-full xl:w-10/12">
+      <Container className="w-full lg:w-11/12 xl:w-10/12">
         <h2 className="mb-6 text-center text-xl font-medium text-brand-100 xl:mb-12 xl:text-3xl">
           <span
             style={{
