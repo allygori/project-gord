@@ -23,7 +23,7 @@ const Faq = ({ className = "" }: Props) => {
               backgroundPosition: "10% 90%",
             }}
           >
-            FAQ (Pertanyaan Umum):
+            FAQ (Pertanyaan Umum)
           </span>
         </h2>
         <div className="flex flex-col md:flex-row">

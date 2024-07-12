@@ -21,7 +21,7 @@ const Portfolio = ({ className = "" }: Props) => {
                 backgroundPosition: "10% 90%",
               }}
             >
-              Projects:
+              Projects
             </span>
           </h2>
           <p className="mb-4 text-left text-2xl text-brand-95 xl:text-4xl">

@@ -49,7 +49,7 @@ const ScopeOfWork = ({ as = "section", className = "" }: Props) => {
               backgroundPosition: "10% 90%",
             }}
           >
-            Kami Menerima Pembuatan Gorden Custom Untuk:
+            Kami Menerima Pembuatan Gorden Custom Untuk
           </span>
         </h2>
 

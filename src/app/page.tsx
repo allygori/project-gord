@@ -13,6 +13,7 @@ import SectionNumbers from "@components/sections/home/numbers";
 // import SectionCategory from "@components/sections/home/category";
 import SectionBenefits from "@components/sections/home/benefits";
 import SectionScopeOfWork from "@/app/components/sections/home/scope-of-work";
+import { Category2 as SectionCategory } from "@/app/components/sections/home/category";
 import SectionPortfolio from "@components/sections/home/portfolio";
 import SectionTestimony from "@components/sections/home/testimony";
 import SectionContact from "@components/sections/home/contact";
@@ -83,6 +84,9 @@ export default function Home() {
 
         {/* section:category */}
         {/* <SectionCategory className="mb-8" /> */}
+
+        {/* section:category */}
+        <SectionCategory className="mb-8" />
 
         {/* section:portfolio */}
         <SectionPortfolio className="py-12" />

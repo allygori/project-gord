@@ -28,6 +28,7 @@ const config: Config = {
         "brand-300": "#d9d9d9",
         "brand-400": "#f7f7f7",
         "brand-500": "#f2f623",
+        "brand-600": "#FFF8E3",
       },
       fontSize: {
         "2xs": ["0.65rem", "0.825rem"],
