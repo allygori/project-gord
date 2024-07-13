@@ -31,7 +31,7 @@ const PeopleReview = ({ className = "" }: Props) => {
           return (
             <li
               key={idx}
-              className="relative h-10 w-10 overflow-hidden rounded-full border-[3px] border-white"
+              className="relative h-8 w-8 overflow-hidden rounded-full border-[3px] border-white md:h-10 md:w-10"
               style={{
                 left: `-${idx * 0.75}rem`,
                 // left: "-1rem",

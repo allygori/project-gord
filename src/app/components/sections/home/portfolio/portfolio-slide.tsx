@@ -54,7 +54,7 @@ const PortfolioSlide = ({}: Props) => {
         return (
           <SwiperSlide
             key={idx}
-            className={`h-96 w-full overflow-hidden rounded-lg`}
+            className={`h-96 w-full overflow-hidden rounded-lg border border-[#e3e4e7]`}
           >
             {/* <div className="h-auto"> */}
             {/* after:absolute after:bottom-0 after:left-0 after:h-[150px] after:w-full after:bg-gradient-to-t after:from-white after:to-transparent */}

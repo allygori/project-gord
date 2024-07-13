@@ -33,8 +33,9 @@ const Benefits = ({ as = "section", className = "" }: Props) => {
               className="flex flex-row overflow-hidden rounded-2xl border border-transparent bg-brand-200 p-4"
             >
               <div className="mr-4 flex-none p-2">
-                <div className="overflow-hidden rounded-full bg-blue-500/10 p-3">
-                  <item.Icon className="mx-auto h-8 w-8 text-blue-500" />
+                {/* <div className="overflow-hidden rounded-full bg-blue-500/10 p-3"> */}
+                <div className="overflow-hidden rounded-full bg-brand-90 bg-opacity-10 p-3">
+                  <item.Icon className="mx-auto h-8 w-8 text-brand-90" />
                 </div>
               </div>
               <div className="flex-1">

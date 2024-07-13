@@ -90,16 +90,16 @@ export default function Home() {
         <SectionCategory className="mb-8" />
 
         {/* section:portfolio */}
-        <SectionPortfolio className="py-12" />
+        <SectionPortfolio className="lg:py-12" />
 
         {/* section:steps */}
         <SectionSteps />
 
-        {/* section:faq */}
-        <SectionFaq />
-
         {/* section:testimony */}
         <SectionTestimony className="mb-0" />
+
+        {/* section:faq */}
+        <SectionFaq />
 
         {/* section:contact */}
         <SectionContact />

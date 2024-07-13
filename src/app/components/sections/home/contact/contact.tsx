@@ -28,8 +28,9 @@ const Contact = ({ id = "contact", className = "" }: Props) => {
             rumah atau kantor Anda
           </h2>
           <p className="mb-8 text-sm xl:text-base">
-            Dapatkan diskon 10% untuk pemesanan pertama di wilayah Jabodebtabek.
-            Tunggu apalagi, konsultasikan sekarang. Gratis!.
+            Dapatkan <strong>Diskon 10%</strong> untuk pemesanan pertama di
+            wilayah Jabodebtabek. Tunggu apalagi, konsultasikan sekarang.
+            Gratis!
           </p>
 
           <div className="w-10/12 xl:w-6/12">

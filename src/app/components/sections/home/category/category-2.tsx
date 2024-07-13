@@ -57,7 +57,7 @@ const Category2 = ({ className = "" }: Props) => {
             Produk
           </span>
         </h2>
-        <ul className="m-0 grid grid-cols-1 gap-2 p-0 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-4">
+        <ul className="m-0 grid grid-cols-2 gap-4 p-0 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-4">
           {CATEGORIES.map((item, idx) => {
             return (
               <li key={idx} className="mb-2 flex w-full flex-col items-center">

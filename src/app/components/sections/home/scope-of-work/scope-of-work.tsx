@@ -57,8 +57,8 @@ const ScopeOfWork = ({ as = "section", className = "" }: Props) => {
           {SCOPES.map((item, idx) => {
             return (
               <li key={idx} className="flex flex-row">
-                <IconCheckBadge className="mr-1 h-5 w-5 text-brand-100 xl:mr-2" />
-                <p className="text-sm text-brand-95 xl:text-base">
+                <IconCheckBadge className="mr-1 h-6 w-6 text-brand-100 lg:h-5 lg:w-5 xl:mr-2" />
+                <p className="text-base text-brand-95 xl:text-base">
                   {item.label}
                 </p>
               </li>
