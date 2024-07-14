@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import Image1 from "@public/assets/img/portfolios/image-01.jpg";
-import Image2 from "@public/assets/img/portfolios/image-02.jpg";
-import Image3 from "@public/assets/img/portfolios/image-03.jpg";
+import Image2 from "@public/assets/img/portfolios/image-02.jpeg";
+import Image3 from "@public/assets/img/portfolios/image-03.jpeg";
 
 type Portfolio = {
   text: string;

@@ -31,7 +31,7 @@ const PeopleReview = ({ className = "" }: Props) => {
           return (
             <li
               key={idx}
-              className="relative h-8 w-8 overflow-hidden rounded-full border-[3px] border-white md:h-10 md:w-10"
+              className="relative h-10 w-10 overflow-hidden rounded-full border-[3px] border-white md:h-10 md:w-10"
               style={{
                 left: `-${idx * 0.75}rem`,
                 // left: "-1rem",
@@ -48,9 +48,9 @@ const PeopleReview = ({ className = "" }: Props) => {
         showLabel={true}
         className="static left-0 xl:relative xl:-left-10"
         classObject={{
-          height: "h-5",
-          width: "w-5",
-          label: "text-brand-100 text-sm ml-1",
+          height: "h-7 md:h-5",
+          width: "w-7 md:w-5",
+          label: "text-brand-100 text-base font-normal md:text-sm ml-1",
         }}
       />
     </div>

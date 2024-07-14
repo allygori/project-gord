@@ -32,6 +32,9 @@ const SCOPES = [
   {
     label: "Penginapan/Hotel/Hostel/Homestay",
   },
+  {
+    label: "Keperluan Lainnya",
+  },
 ];
 
 const ScopeOfWork = ({ as = "section", className = "" }: Props) => {

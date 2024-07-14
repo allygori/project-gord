@@ -48,7 +48,12 @@ const MainHero = () => {
 
           <PeopleReview />
 
-          <ButtonWA1 className="uppercase">KONSULTASI GRATIS</ButtonWA1>
+          <ButtonWA1
+            className="uppercase"
+            message="Halo IKA Gorden, saya ingin memesan gorden dan berkonsultasi mengenai "
+          >
+            KONSULTASI GRATIS
+          </ButtonWA1>
         </div>
         {/* <div>Text HERE 2</div> */}
       </Container>

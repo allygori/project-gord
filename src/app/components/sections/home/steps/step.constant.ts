@@ -15,7 +15,7 @@ export const STEPS: Step[] = [
         <li>
           <div>
             <p>Penjadwalan hari dan jam kunjungan</p>
-            <p>Waktu survey Senin-Minggu Pukul 09.00-16.00</p>
+            <p>Waktu survey Senin-Minggu pukul 09.00-20.00 WIB</p>
           </div>
         </li>
         <li>Proses pembayaran biaya survey sebesar <strong>Rp 100.000</strong> (akan menjadi tambahan DP, jika order disepakati)</li>
@@ -27,7 +27,7 @@ export const STEPS: Step[] = [
     title: "Survey & Pilih Bahan",
     description: `
       <ol class="text-sm text-brand-100 list-decimal list-outside ml-6 xl:ml-4 mt-2 xl:mt-1">
-        <li>Tim survey kami akan membawa <em>sample</em> kain sesuai permintaan pelanggan</li>
+        <li>Tim survey kami akan membawa <em>sample</em> bahan sesuai permintaan pelanggan</li>
         <li>Proses pengukuran</li>
         <li>Pilih bahan</li>
         <li>Perhitungan biaya</li>
@@ -39,7 +39,7 @@ export const STEPS: Step[] = [
     title: "Proses Pengerjaan",
     description: `
       <p class="text-sm text-brand-100 ml-2 xl:ml-0 mt-2 xl:mt-1">
-        IKA Gorden akan mengerjakan sesuai waktu yang telah disepakati. Umumnya, lama waktu yang diperlukan adalah 5-14 hari, sesuai dengan tingkat kerumitan.
+        IKA Gorden akan mengerjakan sesuai waktu yang telah disepakati. Umumnya, lama waktu yang diperlukan adalah <strong>5-14 hari</strong>, bahkan lebih cepat, sesuai dengan tingkat kerumitan.
       </p>
     `,
   },

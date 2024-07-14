@@ -78,6 +78,9 @@ export default function Home() {
         {/* section:scope */}
         <SectionScopeOfWork className="flex items-start bg-brand-200 px-8 py-12" />
 
+        {/* section:category */}
+        <SectionCategory className="mb-4 bg-brand-590 bg-opacity-45 py-8 md:mb-8 md:py-10 lg:py-12" />
+
         {/* section:benefits */}
         <Container as="section" className="mb-8 w-11/12 xl:w-10/12">
           <SectionBenefits as="div" />
@@ -85,9 +88,6 @@ export default function Home() {
 
         {/* section:category */}
         {/* <SectionCategory className="mb-8" /> */}
-
-        {/* section:category */}
-        <SectionCategory className="mb-8" />
 
         {/* section:portfolio */}
         <SectionPortfolio className="lg:py-12" />

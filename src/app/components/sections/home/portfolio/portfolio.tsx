@@ -21,7 +21,7 @@ const Portfolio = ({ className = "" }: Props) => {
                 backgroundPosition: "10% 90%",
               }}
             >
-              Projects
+              Portofolio
             </span>
           </h2>
           <p className="mb-4 text-left text-2xl text-brand-95 xl:text-4xl">
@@ -30,8 +30,8 @@ const Portfolio = ({ className = "" }: Props) => {
           <p className="mb-8 text-left text-sm text-brand-100 md:mb-8 lg:text-base xl:mb-6">
             Kami memiliki portofolio yang membuktikan kualitas dan kepercayaan
             yang kami terima dari ratusan pelanggan kami. Dari proyek berskala
-            kecil hingga besar, kami memberikan hasil terbaik untuk memenenuhi
-            kebutuhan setiap pelanggan kami.
+            kecil hingga besar, kami berusaha memberikan hasil terbaik untuk
+            memenenuhi kebutuhan setiap pelanggan kami.
           </p>
           {/* <p className="mb-6 text-left text-sm text-brand-100 xl:text-base">
             Tim kami siap membantu Anda menemukan gorden impian Anda dan
@@ -44,7 +44,12 @@ const Portfolio = ({ className = "" }: Props) => {
           </div>
 
           <div className="flex w-full items-center justify-center lg:justify-start">
-            <ButtonWA1 className="uppercase">KONSULTASI GRATIS</ButtonWA1>
+            <ButtonWA1
+              className="uppercase"
+              message="Halo, saya tertarik untuk memesan gorden, bagaimana prosesnya?"
+            >
+              KONSULTASI GRATIS
+            </ButtonWA1>
           </div>
         </Container>
       </div>

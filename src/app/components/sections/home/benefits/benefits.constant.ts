@@ -16,7 +16,7 @@ export const BENEFITS: Benefit[] = [
     Icon: IconQuality,
     title: "Kualitas Produk Terbaik",
     description:
-      "Kami menjamin penggunaan produk dengan kualitas terbaik yang dijahit oleh penjahit professional selama 12 tahun.",
+      "Kami menjamin penggunaan produk dengan kualitas terbaik yang kami dapatkan dari berbagai mitra kami.",
   },
   {
     Icon: IconCalendar,
@@ -28,7 +28,7 @@ export const BENEFITS: Benefit[] = [
     Icon: IconSewingMachine,
     title: "Penjahit Berpengalaman",
     description:
-      "Kami menekankan ketepatan waktu dalam setiap tahap pengerjaan dan pemasangan gorden, memberikan kepastian kepada pelanggan tanpa khawatir tentang penundaan.",
+      "Kami memiliki tim penjahit profesional dengan pengalaman lebih dari 12 Tahun menjahit gorden.",
   },
   {
     Icon: IconPrice,
@@ -40,7 +40,7 @@ export const BENEFITS: Benefit[] = [
     Icon: IconChat,
     title: "Konsultasi Gratis",
     description:
-      "Kami menyediakan konsultasi gratis mulai dari survei tempat, harga, pengukuran, hingga pemilihan jenis kain dan model gorden yang sesuai dengan kebutuhan dan preferensi estetika pelanggan.",
+      "Kami menyediakan konsultasi gratis mulai dari survei tempat, harga, pengukuran, hingga pemilihan jenis bahan dan model gorden yang sesuai dengan kebutuhan dan preferensi estetika pelanggan.",
   },
   {
     Icon: IconDelivery,

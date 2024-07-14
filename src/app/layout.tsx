@@ -19,7 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
+        {/*  bg-[#f3f3f3] */}
         <ConfigProvider>{children}</ConfigProvider>
         <GoogleAnalytics gaId={GA4_ID} />
       </body>

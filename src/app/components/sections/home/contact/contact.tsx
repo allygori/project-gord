@@ -28,13 +28,18 @@ const Contact = ({ id = "contact", className = "" }: Props) => {
             rumah atau kantor Anda
           </h2>
           <p className="mb-8 text-sm xl:text-base">
-            Dapatkan <strong>Diskon 10%</strong> untuk pemesanan pertama di
+            Dapatkan <strong>Diskon 5%</strong> untuk pemesanan pertama di
             wilayah Jabodebtabek. Tunggu apalagi, konsultasikan sekarang.
             Gratis!
           </p>
 
           <div className="w-10/12 xl:w-6/12">
-            <ButtonWA1 className="uppercase">DAPATKAN DISKONNYA</ButtonWA1>
+            <ButtonWA1
+              className="uppercase"
+              message="Saya ingin memesan gorden, apakah bener mendapat diskon 5%?"
+            >
+              DAPATKAN DISKONNYA
+            </ButtonWA1>
           </div>
         </div>
       </Container>
