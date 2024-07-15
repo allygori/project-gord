@@ -23,14 +23,16 @@ const Contact = ({ id = "contact", className = "" }: Props) => {
       <Container className="h-full w-11/12 xl:w-10/12">
         <div className="flex h-full w-full flex-col justify-center xl:w-6/12">
           <h2 className="mb-4 text-xl font-semibold text-brand-95 xl:text-3xl">
-            Desain gorden sesuai kebutuhan
+            Desain gorden sesuai
             <br />
-            rumah atau kantor Anda
+            kebutuhan Anda
           </h2>
           <p className="mb-8 text-sm xl:text-base">
             Dapatkan <strong>Diskon 5%</strong> untuk pemesanan pertama di
             wilayah Jabodebtabek. Tunggu apalagi, konsultasikan sekarang.
-            Gratis!
+            <strong>Gratis!</strong>
+            <br />
+            <small className="text-2xs">*Syarat & ketentuan berlaku</small>
           </p>
 
           <div className="w-10/12 xl:w-6/12">

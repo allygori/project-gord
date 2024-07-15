@@ -60,24 +60,23 @@ const Portfolio = ({ className = "" }: Props) => {
           <p className="mb-4 text-left text-2xl text-brand-95 xl:text-4xl">
             Beberapa Proyek yang Kami Kerjakan
           </p>
-          <ul className="-mx-1 mb-2 flex flex-row flex-wrap p-0">
+          <p className="mb-2 text-left text-sm text-brand-100 md:mb-2 lg:text-base xl:mb-2">
+            Kami telah dipercaya beberapa pelanggan dari proyek berskala kecil
+            hingga besar, kami memberikan hasil terbaik untuk memenenuhi
+            kebutuhan setiap pelanggan kami.
+          </p>
+          <ul className="-mx-1 mb-8 flex flex-row flex-wrap p-0 md:mb-8 lg:mb-6">
             {LIST.map((item, idx) => {
               return (
                 <li
                   key={idx}
-                  className="m-1 rounded-md border border-brand-100 px-1.5 py-1 text-xs font-medium text-brand-100 md:rounded-lg md:border-brand-90 md:text-brand-90"
+                  className="m-1 rounded-md border border-brand-90 px-1.5 py-1 text-xs font-medium text-brand-90"
                 >
                   {item.label}
                 </li>
               );
             })}
           </ul>
-          <p></p>
-          <p className="mb-8 text-left text-sm text-brand-100 md:mb-8 lg:text-base xl:mb-6">
-            Kami sudah dipercaya beberapa pelanggan dari proyek berskala kecil
-            hingga besar, kami selalu memberikan hasil terbaik untuk memenenuhi
-            kebutuhan setiap pelanggan kami.
-          </p>
           {/* <p className="mb-6 text-left text-sm text-brand-100 xl:text-base">
             Tim kami siap membantu Anda menemukan gorden impian Anda dan
             memastikan proses pembelian berjalan lancar dari awal hingga akhir.

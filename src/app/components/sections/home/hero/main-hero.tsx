@@ -37,7 +37,7 @@ const MainHero = () => {
       }}
     >
       <Container className="flex w-full flex-row items-center justify-center md:w-11/12 md:justify-start lg:w-11/12 lg:justify-start xl:w-10/12 xl:justify-start">
-        <div className="flex h-screen w-11/12 flex-col items-start justify-center md:w-8/12 lg:w-5/12 xl:w-5/12">
+        <div className="flex h-screen w-11/12 translate-y-2 flex-col items-start justify-center md:w-8/12 md:translate-y-4 lg:h-screen lg:w-5/12 xl:w-5/12">
           <h1 className="text-3xl font-bold leading-snug text-brand-100 xl:text-4xl">
             Gorden Murah Dan Berkualitas Untuk Setiap Kebutuhan Anda
           </h1>
