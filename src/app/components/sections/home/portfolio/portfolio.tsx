@@ -65,7 +65,7 @@ const Portfolio = ({ className = "" }: Props) => {
               return (
                 <li
                   key={idx}
-                  className="m-1 rounded-lg border border-brand-90 px-1.5 py-1 text-xs font-medium text-brand-90"
+                  className="m-1 rounded-md border border-brand-100 px-1.5 py-1 text-xs font-medium text-brand-100 md:rounded-lg md:border-brand-90 md:text-brand-90"
                 >
                   {item.label}
                 </li>
