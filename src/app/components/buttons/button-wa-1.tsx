@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import clsx from "clsx";
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGTMEvent, sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
 import IconWA from "@components/icons/whatsapp-01";
 
@@ -42,9 +42,10 @@ const ButtonWA1 = ({
     `https://wa.me/${WA_NUMBER}${message !== "" ? `?text=${message}` : ""}`,
   );
 
-  const handleSendGTMEvent = () => {
+  const handleSendGAEvent = () => {
     if (gtmData) {
-      sendGTMEvent(gtmData);
+      // sendGTMEvent(gtmData);
+      sendGAEvent(gtmData);
     }
   };
 
@@ -60,7 +61,7 @@ const ButtonWA1 = ({
         roundedClass,
         className,
       )}
-      onClick={handleSendGTMEvent}
+      onClick={handleSendGAEvent}
     >
       {/* bg-[#29af3e] */}
       <IconWA className={iconClass} />

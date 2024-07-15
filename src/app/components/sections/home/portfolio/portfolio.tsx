@@ -48,8 +48,8 @@ const Portfolio = ({ className = "" }: Props) => {
               className="uppercase"
               message="Halo, saya tertarik untuk memesan gorden, bagaimana prosesnya?"
               gtmData={{
-                event: "conversion",
-                value: { send_to: "AW-16642959023/PP5gCOTz3MIZEK_N_f89" },
+                event: "conversion_event_outbound_click",
+                value: { button: "whatsapp", location: "portfolio" },
               }}
             >
               KONSULTASI GRATIS
