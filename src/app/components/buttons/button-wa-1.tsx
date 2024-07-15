@@ -1,9 +1,10 @@
 "use client";
 
 import type { ReactNode } from "react";
-import clsx from "clsx";
-import { sendGTMEvent, sendGAEvent } from "@next/third-parties/google";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import clsx from "clsx";
+import { sendGAEvent } from "@next/third-parties/google";
 import IconWA from "@components/icons/whatsapp-01";
 
 const WA_NUMBER = process?.env?.NEXT_PUBLIC_WA_NUMBER ?? "6285173190051";
@@ -18,7 +19,10 @@ type Props = {
     icon?: string;
     text?: string;
   };
-  gtmData?: Object;
+  gtmData?: {
+    event?: string;
+    value?: Object;
+  };
 };
 
 const ButtonWA1 = ({
@@ -28,6 +32,7 @@ const ButtonWA1 = ({
   className = "",
   classObject,
 }: Props) => {
+  const router = useRouter();
   const paddingClass =
     classObject?.padding ||
     "px-3.5 py-3.5 md:px-5 md:py-3.5 lg:px-5 lg:py-3.5 xl:px-4 xl:py-3";
@@ -42,11 +47,27 @@ const ButtonWA1 = ({
     `https://wa.me/${WA_NUMBER}${message !== "" ? `?text=${message}` : ""}`,
   );
 
-  const handleSendGAEvent = () => {
-    if (gtmData) {
-      // sendGTMEvent(gtmData);
-      sendGAEvent(gtmData);
+  const handleSendGAEvent = (event: React.MouseEvent) => {
+    if (gtmData?.event) {
+      event.preventDefault();
+
+      const url = event?.currentTarget?.getAttribute("href") || "";
+      const callback = () => {
+        if (typeof url != "undefined") {
+          router.push(url);
+        }
+      };
+
+      sendGAEvent("event", gtmData?.event || "", {
+        ...(gtmData?.value || {}),
+        event_callback: callback,
+        event_timeout: 2000,
+      });
+
+      return true;
     }
+
+    return false;
   };
 
   return (
