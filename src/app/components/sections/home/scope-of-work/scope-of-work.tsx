@@ -33,6 +33,9 @@ const SCOPES = [
     label: "Penginapan/Hotel/Hostel/Homestay",
   },
   {
+    label: "Pabrik",
+  },
+  {
     label: "Keperluan Lainnya",
   },
 ];

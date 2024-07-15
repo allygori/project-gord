@@ -10,12 +10,12 @@ export const STEPS: Step[] = [
     title: "Konsultasi",
     description: `
       <ol class="text-sm text-brand-100 list-decimal list-outside ml-6 xl:ml-4 mt-2 xl:mt-1">
-        <li>Pelanggan menyampaikan kebutuhan gorden yang diinginkan kepada tim kami. Anda dapat bertanya mengenai model, jenis bahan & jumlah gorden
+        <li>Pelanggan dapat menyampaikan total budget, jenis gorden, model, bahan & jumlah gorden yang diinginkan
         </li>
         <li>
           <div>
-            <p>Penjadwalan hari dan jam kunjungan</p>
-            <p>Waktu survey Senin-Minggu pukul 09.00-20.00 WIB</p>
+            <p>Penentuan jadwal hari dan jam survey</p>
+            <p>Waktu survey Senin-Minggu pukul 09.00-17.00 WIB</p>
           </div>
         </li>
         <li>Proses pembayaran biaya survey sebesar <strong>Rp 100.000</strong> (akan menjadi tambahan DP, jika order disepakati)</li>
@@ -27,10 +27,11 @@ export const STEPS: Step[] = [
     title: "Survey & Pilih Bahan",
     description: `
       <ol class="text-sm text-brand-100 list-decimal list-outside ml-6 xl:ml-4 mt-2 xl:mt-1">
-        <li>Tim survey kami akan membawa <em>sample</em> bahan sesuai permintaan pelanggan</li>
-        <li>Proses pengukuran</li>
-        <li>Pilih bahan</li>
+        <li>Tim survey kami akan membawa katalog bahan sesuai permintaan pelanggan</li>
+        <li>Proses pengukuran dilakukan</li>
+        <li>Pelanggan memilih bahan</li>
         <li>Perhitungan biaya</li>
+        <li>Pelanggan melakukan pembayaran DP 50% dari total biaya</li>
       </ol>
     `,
   },
@@ -50,7 +51,7 @@ export const STEPS: Step[] = [
       <ol class="text-sm text-brand-100 list-decimal list-outside ml-6 xl:ml-4 mt-2 xl:mt-1">
         <li>Kami akan menghubungi pelanggan ketika selesai</li>
         <li>Penjadwalan hari dan jam pemasangan</li>
-        <li>Tim kami akan datang ke lokasi pemasangan sesuai hari dan jam yang disepakati dan melakukan pemasangan</li>
+        <li>Tim kami akan melakukan pemasangan sesuai hari dan jam yang disepakati</li>
         <li>Pelunasan pembayaran</li>
         <li>Selesai</li>
       </ol>

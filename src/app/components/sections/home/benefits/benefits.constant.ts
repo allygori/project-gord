@@ -34,7 +34,7 @@ export const BENEFITS: Benefit[] = [
     Icon: IconPrice,
     title: "Harga Kompetitif",
     description:
-      "Kami Menawarkan harga yang sangat kompetitif tanpa mengorbankan kualitas produk.",
+      "Kami menawarkan harga yang sangat kompetitif tanpa mengorbankan kualitas produk.",
   },
   {
     Icon: IconChat,
@@ -44,8 +44,8 @@ export const BENEFITS: Benefit[] = [
   },
   {
     Icon: IconDelivery,
-    title: "Layanan Pengiriman Dan Pemasangan",
+    title: "Layanan Pemasangan",
     description:
-      "Kami menyediakan layanan pengiriman dan pemasangan yang profesional, sehingga pelanggan tidak perlu repot memikirkan hal tersebut selama proses pembelian dan pemasangan gorden.",
+      "Kami menyediakan layanan pemasangan yang profesional, sehingga pelanggan tidak perlu repot memikirkan hal tersebut selama proses pembelian dan pemasangan gorden.",
   },
 ];

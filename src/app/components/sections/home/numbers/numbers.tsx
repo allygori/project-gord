@@ -11,7 +11,7 @@ const Numbers = ({ className = "" }: Props) => {
       <Container className="flex w-full flex-row items-center justify-between px-2 text-center md:w-full md:px-0 lg:w-full lg:px-0 xl:w-10/12 xl:px-4">
         <div className="flex-1 py-8 text-center">
           <h3 className="text-base font-semibold text-white xl:text-2xl">
-            5 Tahun+
+            10 Tahun+
           </h3>
           <p className="text-xs text-white xl:text-sm">Penggalaman</p>
         </div>
@@ -23,7 +23,7 @@ const Numbers = ({ className = "" }: Props) => {
         </div>
         <div className="flex-1 py-8 text-center">
           <h3 className="text-base font-semibold text-white xl:text-2xl">
-            150+
+            120+
           </h3>
           <p className="text-xs text-white xl:text-sm">
             Proyek <span className="hidden md:inline">Terselesaikan</span>

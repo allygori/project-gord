@@ -66,7 +66,7 @@ export const FAQS: Faq[] = [
     value: "hvtVOZ",
     header: "BERAPA LAMA PROSES PENGERJAAN?",
     content: `
-      <p>Kami akan mengkordasikan durasi pengerjaan kepada pihak pelanggan, durasi pengerjaan adalah kesepakatan bersama. Umumnya <strong>5-7 hari</strong>, bahkan dapat selesai lebih cepat. Tentunya kami akan mencarikan durasi optimal.</p>
+      <p>Kami akan mengkordasikan durasi pengerjaan kepada pihak pelanggan, durasi pengerjaan adalah kesepakatan bersama. Umumnya <strong>5-14 hari</strong>, bahkan dapat selesai lebih cepat. Tentunya kami akan mencarikan durasi optimal.</p>
     `,
   },
   {

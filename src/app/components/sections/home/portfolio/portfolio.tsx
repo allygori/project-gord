@@ -3,6 +3,39 @@ import Container from "@components/container";
 import PortfolioSlide from "./portfolio-slide";
 import { ButtonWA1 } from "@components/buttons";
 
+const LIST = [
+  {
+    label: "Cluster Greenwich BSD",
+  },
+  {
+    label: "Perumahan Suvarna Sutera Tangerang",
+  },
+  {
+    label: "Perum Graha Raya Bintaro",
+  },
+  {
+    label: "Klinik Bimoedika cabang BSD",
+  },
+  {
+    label: "SMK BAM Cikupa",
+  },
+  {
+    label: "Perumahan Citra Raya Cikupa Tangerang",
+  },
+  {
+    label: "Perumahan Ciakar Royal Permai",
+  },
+  {
+    label: "Perumahan Golden Park Serpong",
+  },
+  {
+    label: "Perumahan Citra Maja Raya",
+  },
+  {
+    label: "Area lain di Jabodetabek",
+  },
+];
+
 type Props = {
   className?: string;
 };
@@ -25,13 +58,25 @@ const Portfolio = ({ className = "" }: Props) => {
             </span>
           </h2>
           <p className="mb-4 text-left text-2xl text-brand-95 xl:text-4xl">
-            Kami Memberikan Produk dan Pelayanan Terbaik
+            Beberapa Proyek yang Kami Kerjakan
           </p>
+          <ul className="-mx-1 mb-2 flex flex-row flex-wrap p-0">
+            {LIST.map((item, idx) => {
+              return (
+                <li
+                  key={idx}
+                  className="m-1 rounded-lg border border-brand-90 px-1.5 py-1 text-xs font-medium text-brand-90"
+                >
+                  {item.label}
+                </li>
+              );
+            })}
+          </ul>
+          <p></p>
           <p className="mb-8 text-left text-sm text-brand-100 md:mb-8 lg:text-base xl:mb-6">
-            Kami memiliki portofolio yang membuktikan kualitas dan kepercayaan
-            yang kami terima dari ratusan pelanggan kami. Dari proyek berskala
-            kecil hingga besar, kami berusaha memberikan hasil terbaik untuk
-            memenenuhi kebutuhan setiap pelanggan kami.
+            Kami sudah dipercaya beberapa pelanggan dari proyek berskala kecil
+            hingga besar, kami selalu memberikan hasil terbaik untuk memenenuhi
+            kebutuhan setiap pelanggan kami.
           </p>
           {/* <p className="mb-6 text-left text-sm text-brand-100 xl:text-base">
             Tim kami siap membantu Anda menemukan gorden impian Anda dan
@@ -48,7 +93,7 @@ const Portfolio = ({ className = "" }: Props) => {
               className="uppercase"
               message="Halo, saya tertarik untuk memesan gorden, bagaimana prosesnya?"
               gtmData={{
-                event: "conversion_event_outbound_click",
+                event: "conversion_event_outbound_click_1",
                 value: { button: "whatsapp", location: "portfolio" },
               }}
             >

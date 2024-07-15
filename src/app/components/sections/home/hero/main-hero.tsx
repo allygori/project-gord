@@ -39,11 +39,11 @@ const MainHero = () => {
       <Container className="flex w-full flex-row items-center justify-center md:w-11/12 md:justify-start lg:w-11/12 lg:justify-start xl:w-10/12 xl:justify-start">
         <div className="flex h-screen w-11/12 flex-col items-start justify-center md:w-8/12 lg:w-5/12 xl:w-5/12">
           <h1 className="text-3xl font-bold leading-snug text-brand-100 xl:text-4xl">
-            Gorden Murah Dan Berkualitas Untuk Setiap Rumah & Kantor
+            Gorden Murah Dan Berkualitas Untuk Setiap Kebutuhan Anda
           </h1>
           <span className="my-3 block h-2 w-4/12 rounded bg-[#f2f623]" />
           <p className="mb-5 text-base font-normal text-brand-100 xl:text-lg">
-            Harga Terjangkau dengan Kualitas Terbaik di Indonesia.
+            Harga Terjangkau dengan Kualitas Terbaik.
           </p>
 
           <PeopleReview />
@@ -52,7 +52,7 @@ const MainHero = () => {
             className="uppercase"
             message="Halo IKA Gorden, saya ingin memesan gorden dan berkonsultasi mengenai "
             gtmData={{
-              event: "conversion_event_outbound_click",
+              event: "conversion_event_outbound_click_1",
               value: { button: "whatsapp", location: "hero" },
             }}
           >
