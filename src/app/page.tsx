@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/app/components/container";
@@ -38,7 +38,7 @@ export default function Home() {
   });
 
   return (
-    <>
+    <Suspense>
       {/* header */}
       <header
         className={`dark:border-gray-70 fixed start-0 top-0 z-20 w-full ${
@@ -148,6 +148,6 @@ export default function Home() {
           </p>
         </Container>
       </footer>
-    </>
+    </Suspense>
   );
 }

@@ -1,13 +1,12 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
 import { sendGAEvent } from "@next/third-parties/google";
 import IconWA from "@components/icons/whatsapp-01";
-
-const WA_NUMBER = process?.env?.NEXT_PUBLIC_WA_NUMBER ?? "6285173190051";
 
 type Props = {
   children?: ReactNode;
@@ -33,6 +32,32 @@ const ButtonWA1 = ({
   classObject,
 }: Props) => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const [link, setLink] = useState("");
+
+  // generate wa number
+  useEffect(() => {
+    const param = searchParams.get("cs");
+    let WANumber = process?.env?.NEXT_PUBLIC_WA_NUMBER;
+    if (searchParams.has("cs") && param !== "") {
+      if (param == "1") {
+        WANumber = process?.env?.NEXT_PUBLIC_WA_NUMBER_CS1;
+      } else if (param == "2") {
+        WANumber = process?.env?.NEXT_PUBLIC_WA_NUMBER_CS2;
+      } else {
+        WANumber = process?.env?.NEXT_PUBLIC_WA_NUMBER;
+      }
+    } else {
+      WANumber = process?.env?.NEXT_PUBLIC_WA_NUMBER;
+    }
+
+    setLink(
+      encodeURI(
+        `https://wa.me/${WANumber}${message !== "" ? `?text=${message}` : ""}`,
+      ),
+    );
+  }, [searchParams, message]);
+
   const paddingClass =
     classObject?.padding ||
     "px-3.5 py-3.5 md:px-5 md:py-3.5 lg:px-5 lg:py-3.5 xl:px-4 xl:py-3";
@@ -42,10 +67,6 @@ const ButtonWA1 = ({
   const textClass =
     classObject?.text ||
     "inline-block text-xs font-semibold text-white md:text-sm lg:text-sm xl:text-base";
-
-  const link = encodeURI(
-    `https://wa.me/${WA_NUMBER}${message !== "" ? `?text=${message}` : ""}`,
-  );
 
   const handleSendGAEvent = (event: React.MouseEvent) => {
     if (gtmData?.event) {
@@ -71,23 +92,25 @@ const ButtonWA1 = ({
   };
 
   return (
-    <Link
-      href={link}
-      role="button"
-      className={clsx(
-        "bg-[#25d366] hover:bg-[#03c85d] hover:transition-colors hover:duration-200 hover:ease-in-out active:shadow-inner",
-        "inline-flex flex-row items-center justify-center",
-        "border border-transparent",
-        paddingClass,
-        roundedClass,
-        className,
-      )}
-      onClick={handleSendGAEvent}
-    >
-      {/* bg-[#29af3e] */}
-      <IconWA className={iconClass} />
-      <span className={textClass}>{children}</span>
-    </Link>
+    <Suspense>
+      <Link
+        href={link}
+        role="button"
+        className={clsx(
+          "bg-[#25d366] hover:bg-[#03c85d] hover:transition-colors hover:duration-200 hover:ease-in-out active:shadow-inner",
+          "inline-flex flex-row items-center justify-center",
+          "border border-transparent",
+          paddingClass,
+          roundedClass,
+          className,
+        )}
+        onClick={handleSendGAEvent}
+      >
+        {/* bg-[#29af3e] */}
+        <IconWA className={iconClass} />
+        <span className={textClass}>{children}</span>
+      </Link>
+    </Suspense>
   );
 };
 
