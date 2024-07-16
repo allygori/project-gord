@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, Suspense } from "react";
 import ConfigContext, { type ConfigContextType } from "@components/config";
 import Container from "@/app/components/container";
 import BackgroundImage from "@public/assets/img/hero/ccbe06199649759.6655870ca7846.jpg";
@@ -48,16 +48,18 @@ const MainHero = () => {
 
           <PeopleReview />
 
-          <ButtonWA1
-            className="uppercase"
-            message="Halo IKA Gorden, saya ingin memesan gorden dan berkonsultasi mengenai "
-            gtmData={{
-              event: "conversion_event_outbound_click_1",
-              value: { button: "whatsapp", location: "hero" },
-            }}
-          >
-            KONSULTASI GRATIS
-          </ButtonWA1>
+          <Suspense>
+            <ButtonWA1
+              className="uppercase"
+              message="Halo IKA Gorden, saya ingin memesan gorden dan berkonsultasi mengenai "
+              gtmData={{
+                event: "conversion_event_outbound_click_1",
+                value: { button: "whatsapp", location: "hero" },
+              }}
+            >
+              KONSULTASI GRATIS
+            </ButtonWA1>
+          </Suspense>
         </div>
         {/* <div>Text HERE 2</div> */}
       </Container>

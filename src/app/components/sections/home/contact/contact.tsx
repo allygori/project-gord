@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Suspense } from "react";
 import Container from "@components/container";
 import { ButtonWA1 } from "@components/buttons";
 
@@ -36,16 +37,18 @@ const Contact = ({ id = "contact", className = "" }: Props) => {
           </p>
 
           <div className="w-10/12 xl:w-6/12">
-            <ButtonWA1
-              className="uppercase"
-              message="Saya ingin memesan gorden, apakah bener mendapat diskon 5%?"
-              gtmData={{
-                event: "conversion_event_outbound_click_1",
-                value: { button: "whatsapp", location: "contact" },
-              }}
-            >
-              DAPATKAN DISKONNYA
-            </ButtonWA1>
+            <Suspense>
+              <ButtonWA1
+                className="uppercase"
+                message="Saya ingin memesan gorden, apakah bener mendapat diskon 5%?"
+                gtmData={{
+                  event: "conversion_event_outbound_click_1",
+                  value: { button: "whatsapp", location: "contact" },
+                }}
+              >
+                DAPATKAN DISKONNYA
+              </ButtonWA1>
+            </Suspense>
           </div>
         </div>
       </Container>

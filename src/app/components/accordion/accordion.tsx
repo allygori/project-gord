@@ -1,3 +1,5 @@
+"use client";
+
 import clsx from "clsx";
 import { useState } from "react";
 import * as AccordionPrimitive from "@allygory/accordion";

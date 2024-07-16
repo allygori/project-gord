@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Suspense } from "react";
 import Container from "@components/container";
 import PortfolioSlide from "./portfolio-slide";
 import { ButtonWA1 } from "@components/buttons";
@@ -88,16 +89,18 @@ const Portfolio = ({ className = "" }: Props) => {
           </div>
 
           <div className="flex w-full items-center justify-center lg:justify-start">
-            <ButtonWA1
-              className="uppercase"
-              message="Halo, saya tertarik untuk memesan gorden, bagaimana prosesnya?"
-              gtmData={{
-                event: "conversion_event_outbound_click_1",
-                value: { button: "whatsapp", location: "portfolio" },
-              }}
-            >
-              KONSULTASI GRATIS
-            </ButtonWA1>
+            <Suspense>
+              <ButtonWA1
+                className="uppercase"
+                message="Halo, saya tertarik untuk memesan gorden, bagaimana prosesnya?"
+                gtmData={{
+                  event: "conversion_event_outbound_click_1",
+                  value: { button: "whatsapp", location: "portfolio" },
+                }}
+              >
+                KONSULTASI GRATIS
+              </ButtonWA1>
+            </Suspense>
           </div>
         </Container>
       </div>

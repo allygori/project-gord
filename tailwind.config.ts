@@ -29,6 +29,7 @@ const config: Config = {
         "brand-300": "#d9d9d9",
         "brand-400": "#f7f7f7",
         "brand-500": "#f2f623",
+        "brand-580": "#fff4ee", // orange pastel
         "brand-590": "#ffffe6", // yellow pastel
         "brand-595": "#FFFED3", // yellow pastel
         "brand-600": "#FFF8E3", // yellow

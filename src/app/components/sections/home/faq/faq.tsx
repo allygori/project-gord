@@ -1,3 +1,5 @@
+"use client";
+
 import clsx from "clsx";
 import Accordion from "@components/accordion";
 import Container from "@components/container";
