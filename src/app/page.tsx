@@ -10,7 +10,6 @@ import ImageLogoWithTextWhite from "@public/assets/img/logo/logo-with-text-white
 import ConfigContext, { type ConfigContextType } from "@components/config";
 import SectionMainHero from "@/app/components/sections/home/hero";
 import SectionNumbers from "@components/sections/home/numbers";
-// import SectionCategory from "@components/sections/home/category";
 import SectionBenefits from "@components/sections/home/benefits";
 import SectionScopeOfWork from "@/app/components/sections/home/scope-of-work";
 import { Category2 as SectionCategory } from "@/app/components/sections/home/category";
@@ -118,10 +117,11 @@ export default function Home() {
                 className="mb-2.5 xl:mb-3"
               />
               <p className="text-xs text-white xl:text-sm">
-                IKA Gorden menerima berbagai macam pembuatan gorden custom
-                sesuai permintaan pelanggan, diantaranya gorden blackout,
-                vitrase, vertical blind, horizontal blind, roller blind dan
-                pembuatan interior lainnya.
+                IKA Gorden menerima pembuatan berbagai macam gorden custom
+                sesuai permintaan pelanggan, diantaranya: gorden rumah, gorden
+                kantor, gorden blackout, gorden smokring, vitrase, vertical
+                blind, horizontal blind, roller blind, gorden hotel, gorden
+                rumah sakit dan pembuatan interior lainnya.
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function Home() {
             </address>
             <h3 className="text-sm text-white xl:text-base">Jam Operasional</h3>
             <p className="text-xs text-white md:text-sm">Senin-Minggu</p>
-            <p className="text-xs text-white md:text-sm">06:00 - 21.30</p>
+            <p className="text-xs text-white md:text-sm">08:00 - 21.00</p>
           </div>
         </Container>
         <Container className="w-11/12 bg-brand-95 py-5 xl:w-10/12">
