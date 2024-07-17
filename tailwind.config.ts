@@ -33,6 +33,20 @@ const config: Config = {
         "brand-590": "#ffffe6", // yellow pastel
         "brand-595": "#FFFED3", // yellow pastel
         "brand-600": "#FFF8E3", // yellow
+
+        // brand-2: brown
+        // "brand-2-100": "#aa9081",
+        "brand-2-50": "#f5f3f0",
+        "brand-2-55": "#ebe6e0",
+        "brand-2-60": "#e1dad1",
+        "brand-2-70": "#d7cdc1",
+        "brand-2-90": "#cdc1b2",
+        "brand-2-95": "#c3b5a2",
+        "brand-2-100": "#A79277",
+        "brand-2-200": "#9a8365",
+        "brand-2-300": "#6e5d3c",
+        "brand-2-400": "#625046",
+        // "brand-2-500": "#B3E5BE",
       },
       fontSize: {
         "2xs": ["0.65rem", "0.825rem"],

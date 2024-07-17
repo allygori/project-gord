@@ -10,7 +10,7 @@ const GA4_ID = process?.env?.NEXT_PUBLIC_GA4_ID ?? "";
 // const HOSTNAME = process?.env?.NEXT_PUBLIC_HOSTNAME ?? "ikagorden.com";
 
 export const metadata: Metadata = {
-  title: "IKA Gorden",
+  title: "IKA Gorden | Gorden Custom Berkualitas & Terjangkau",
   description: "Desain Gorden Sesuai Kebutuhan Rumah atau Kantor Anda",
 };
 

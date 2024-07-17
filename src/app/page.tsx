@@ -1,5 +1,3 @@
-// "use client";
-import { Suspense } from "react";
 import type { Metadata } from "next";
 import Container from "@/app/components/container";
 import SectionMainHero from "@/app/components/sections/home/hero";
@@ -12,13 +10,13 @@ import SectionTestimony from "@components/sections/home/testimony";
 import SectionContact from "@components/sections/home/contact";
 import SectionFaq from "@components/sections/home/faq";
 import SectionSteps from "@components/sections/home/steps";
-import { HeaderOne } from "@components/sections/home/headers";
-import { FooterOne } from "@components/sections/home/footers";
+import { HeaderOne } from "@components/headers";
+import { FooterOne } from "@components/footers";
 
 const HOSTNAME = process?.env?.NEXT_PUBLIC_HOSTNAME ?? "ikagorden.com";
 
 export const metadata: Metadata = {
-  title: "IKA Gorden",
+  title: "IKA Gorden | Gorden Custom Berkualitas & Terjangkau",
   description:
     "Jasa pembuatan gorden rumah, kantor, hotel, rumah sakit & keperluan lainnya. Harga terjangkau tanpa mengurangi kualitas produk.",
   alternates: {
@@ -34,7 +32,7 @@ export default function Home() {
 
       {/* main */}
       <main className="min-h-screen w-full">
-        {/* section:hero */}
+        {/* section:main-hero */}
         <SectionMainHero />
 
         {/* section:numbers */}
@@ -44,7 +42,7 @@ export default function Home() {
         <SectionScopeOfWork className="flex items-start bg-brand-200 px-8 py-12" />
 
         {/* section:category */}
-        <SectionCategory className="bg-brand-580 mb-4 bg-opacity-45 py-8 md:mb-8 md:py-10 lg:py-12" />
+        <SectionCategory className="mb-4 bg-brand-580 bg-opacity-45 py-8 md:mb-8 md:py-10 lg:py-12" />
 
         {/* section:benefits */}
         <Container as="section" className="mb-8 w-11/12 xl:w-10/12">

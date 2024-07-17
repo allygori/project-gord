@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "@/app/components/container";
 import ImageLogoWithTextWhite from "@public/assets/img/logo/logo-with-text-white.png";
 
@@ -29,10 +30,24 @@ const FooterOne = ({}: Props) => {
           </div>
         </div>
         <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
-          <h3 className="text-base text-white xl:text-lg">Kontak</h3>
-          <p className="text-xs text-white md:text-sm">+62 895-3261-63269</p>
+          <h3 className="text-base text-white xl:text-lg">Jasa & Layanan</h3>
+
+          <ul className="m-0 p-0">
+            <li>
+              <Link
+                href="/gorden-kantor"
+                className="text-xs text-white hover:text-opacity-80 hover:underline md:text-sm"
+              >
+                Pembuatan Gorden Kantor
+              </Link>
+            </li>
+          </ul>
         </div>
         <div className="mb-4 mr-0 flex-1 xl:mb-0 xl:mr-4">
+          <h3 className="text-base text-white xl:text-lg">Kontak</h3>
+          <p className="mb-2 text-xs text-white md:mb-4 md:text-sm">
+            +62 895-3261-63269
+          </p>
           <h3 className="text-base text-white xl:text-lg">Alamat</h3>
           <address className="mb-2 text-xs not-italic text-white md:text-sm">
             Jalan Graha Mitra Citra blok K 13 no.3 Kelurahan Panongan, Kecamatan
