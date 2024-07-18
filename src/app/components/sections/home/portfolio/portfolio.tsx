@@ -93,10 +93,6 @@ const Portfolio = ({ className = "" }: Props) => {
               <ButtonWA1
                 className="uppercase"
                 message="Halo, saya tertarik untuk memesan gorden, bagaimana prosesnya?"
-                gtmData={{
-                  event: "conversion_event_outbound_click_1",
-                  value: { button: "whatsapp", location: "portfolio" },
-                }}
               >
                 KONSULTASI GRATIS
               </ButtonWA1>

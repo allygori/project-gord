@@ -52,10 +52,6 @@ const MainHero = () => {
             <ButtonWA1
               className="uppercase"
               message="Halo IKA Gorden, saya ingin memesan gorden dan berkonsultasi mengenai "
-              gtmData={{
-                event: "conversion_event_outbound_click_1",
-                value: { button: "whatsapp", location: "hero" },
-              }}
             >
               KONSULTASI GRATIS
             </ButtonWA1>

@@ -41,10 +41,6 @@ const Contact = ({ id = "contact", className = "" }: Props) => {
               <ButtonWA1
                 className="uppercase"
                 message="Saya ingin memesan gorden, apakah bener mendapat diskon 5%?"
-                gtmData={{
-                  event: "conversion_event_outbound_click_1",
-                  value: { button: "whatsapp", location: "contact" },
-                }}
               >
                 DAPATKAN DISKONNYA
               </ButtonWA1>

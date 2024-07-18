@@ -1,20 +1,5 @@
-import { renderToString, renderToStaticMarkup } from "react-dom/server";
-import Link from "next/link";
-import dynamic from "next/dynamic";
-import { ButtonWA1 } from "@components/buttons";
+import { renderToStaticMarkup } from "react-dom/server";
 import IconWA from "@components/icons/whatsapp-01";
-
-// const ButtonWA1 = dynamic(() => import("@components/buttons/button-wa-1"), {
-//   ssr: true,
-// });
-
-// const ButtonWAAAA = () => {
-//   return <ButtonWA1>Hubungi Kami</ButtonWA1>;
-// };
-
-// const output = document.createElement("div");
-// const staticElement = renderToString(<ButtonWAAAA />);
-// output.innerHTML = staticElement;
 
 const WA_NUMBER = process?.env?.NEXT_PUBLIC_WA_NUMBER ?? "6285173190051";
 const link = (message?: string) => {
@@ -87,26 +72,4 @@ export const FAQS: Faq[] = [
       </a>
     </div>`,
   },
-  // {
-  //   value: "hvtVOZ",
-  //   header: "PERTANYAAN LAINNYA",
-  //   content: `<div>
-  //     <p class="mb-2">Untuk pertanyaan lain jangan ragu untuk menghubungi kami langsung melalui:<p>
-  //     ${renderToStaticMarkup(
-  //       <ButtonWA1
-  //         className=""
-  //         classObject={{
-  //           padding:
-  //             "px-2.5 py-2 md:px-2.5 md:py-2 lg:px-2.5 lg:py-2 xl:px-2.5 xl:py-2",
-  //           rounded: "rounded-lg md:rounded-lg",
-  //           icon: "mr-1 h-3.5 w-3.5 text-white md:mr-2 md:h-4 md:w-4",
-  //           text: "inline-block text-xs font-semibold text-white md:text-sm lg:text-sm xl:text-sm",
-  //         }}
-  //         message="Saya ingin bertanya mengenai "
-  //       >
-  //         WhatsApp
-  //       </ButtonWA1>,
-  //     )}
-  //   </div>`,
-  // },
 ];

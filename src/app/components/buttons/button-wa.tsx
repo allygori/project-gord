@@ -4,21 +4,16 @@ import type { ReactNode } from "react";
 import { forwardRef, useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { sendGAEvent } from "@next/third-parties/google";
 
 type Ref = HTMLAnchorElement;
 type Props = {
   children?: ReactNode;
   message?: string;
   className?: string;
-  gtmData?: {
-    event?: string;
-    value?: Object;
-  };
 };
 
 const ButtonWA = forwardRef<Ref, Props>((props, ref) => {
-  const { children, message = "", gtmData, className = "" } = props;
+  const { children, message = "", className = "" } = props;
   const router = useRouter();
   const searchParams = useSearchParams();
   const [link, setLink] = useState("");
@@ -46,38 +41,9 @@ const ButtonWA = forwardRef<Ref, Props>((props, ref) => {
     );
   }, [searchParams, message]);
 
-  const handleSendGAEvent = (event: React.MouseEvent) => {
-    if (gtmData?.event) {
-      event.preventDefault();
-
-      const url = event?.currentTarget?.getAttribute("href") || "";
-      const callback = () => {
-        if (typeof url != "undefined") {
-          router.push(url);
-        }
-      };
-
-      sendGAEvent("event", gtmData?.event || "", {
-        ...(gtmData?.value || {}),
-        event_callback: callback,
-        event_timeout: 2000,
-      });
-
-      return true;
-    }
-
-    return false;
-  };
-
   return (
     <Suspense>
-      <Link
-        ref={ref}
-        href={link}
-        role="button"
-        className={className}
-        onClick={handleSendGAEvent}
-      >
+      <Link ref={ref} href={link} role="button" className={className}>
         {children}
       </Link>
     </Suspense>
