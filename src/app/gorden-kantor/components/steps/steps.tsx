@@ -1,14 +1,20 @@
+import clsx from "clsx";
+import type { ComponentPropsWithoutRef, ElementRef } from "react";
+import { forwardRef } from "react";
 import Container from "@components/container";
 import { STEPS } from "./step.constant";
-import clsx from "clsx";
 
+// type StepsElement = ElementRef<HTMLDivElement>;
+// type StepsProps = ComponentPropsWithoutRef<HTMLDivElement> &
+
+type Ref = HTMLElement;
 type Props = {
   className?: string;
 };
 
-const Steps = ({ className = "" }: Props) => {
+const Steps = forwardRef<Ref, Props>(({ className = "" }, ref) => {
   return (
-    <section className={clsx("py-8 md:py-10 xl:py-12", className)}>
+    <section ref={ref} className={clsx("py-8 md:py-10 xl:py-12", className)}>
       <Container className="w-11/12 xl:w-10/12" autoMargin={true}>
         <h2 className="mb-6 text-center text-xl font-semibold text-brand-100 xl:mb-12 xl:text-3xl">
           Tahap Pemesanan
@@ -50,6 +56,12 @@ const Steps = ({ className = "" }: Props) => {
       </Container>
     </section>
   );
-};
+});
+
+Steps.displayName = "Steps";
+
+// ({ className = "" }: Props) => {
+
+// };
 
 export default Steps;

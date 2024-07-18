@@ -1,16 +1,25 @@
 import clsx from "clsx";
 import Image from "next/image";
-import Container from "@/app/components/container";
 import ImageHero from "@public/assets/img/hero/61e2fef39d795a620caad1b47461f4b1.jpg";
+import Container from "@/app/components/container";
+import { ButtonWA } from "@components/buttons";
 
 type Props = {
   className?: string;
+  onCTA1Click?: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => void;
+  // onCTA2Click?: () => void;
 };
 
-const PageHero = ({ className = "" }: Props) => {
+const PageHero = ({
+  className = "",
+  onCTA1Click = () => {},
+  // onCTA2Click = () => {},
+}: Props) => {
   return (
     <section
-      className={clsx(`min-h-screen min-w-full bg-brand-580`, className)}
+      className={clsx(`h-full min-h-screen min-w-full bg-brand-580`, className)}
     >
       {/* bg-[#f4f4f4] */}
       {/* bg-[#fff4ee] */}
@@ -18,7 +27,7 @@ const PageHero = ({ className = "" }: Props) => {
       {/* bg-[#edeae7] */}
       <Container className="flex w-full flex-col items-center justify-center md:w-11/12 md:justify-start lg:h-screen lg:w-11/12 lg:flex-row lg:justify-start lg:space-x-2 xl:w-10/12 xl:justify-start">
         {/* side:left */}
-        <div className="order-2 mb-0 mt-32 flex w-11/12 flex-col items-start justify-center md:mb-0 md:w-8/12 md:translate-y-4 lg:order-1 lg:mt-0 lg:h-screen lg:w-5/12 xl:w-5/12">
+        <div className="order-2 mb-10 mt-32 flex w-11/12 flex-col items-start justify-center md:mb-0 md:w-8/12 md:translate-y-4 lg:order-1 lg:mt-0 lg:h-screen lg:w-5/12 xl:w-5/12">
           <p className="mb-2 text-lg font-medium text-brand-2-200 md:mb-4">
             Gorden Kantor
           </p>
@@ -37,20 +46,30 @@ const PageHero = ({ className = "" }: Props) => {
             <button
               type="button"
               className="overflow-hidden rounded-lg border border-transparent bg-brand-2-200 px-4 py-4 text-center text-sm font-medium text-white hover:bg-brand-2-300 lg:px-4 lg:py-3 lg:text-base"
+              onClick={(event) => onCTA1Click(event)}
             >
               Pelajari Selengkapnya
             </button>
-            <button
+            <ButtonWA
+              className="overflow-hidden rounded-lg border border-brand-2-200 px-4 py-4 text-center text-sm font-medium text-brand-2-300 hover:bg-brand-2-300 hover:text-white lg:px-4 lg:py-3 lg:text-base"
+              message="Halo IKA Gorden, saya ingin memesan gorden kantor "
+            >
+              Hubungi Kami
+            </ButtonWA>
+            {/* <Link href="" className="overflow-hidden rounded-lg border border-brand-2-200 px-4 py-4 text-center text-sm font-medium text-brand-2-300 hover:bg-brand-2-300 hover:text-white lg:px-4 lg:py-3 lg:text-base">
+              Hubungi Kami
+            </Link> */}
+            {/* <button
               type="button"
               className="overflow-hidden rounded-lg border border-brand-2-200 px-4 py-4 text-center text-sm font-medium text-brand-2-300 hover:bg-brand-2-300 hover:text-white lg:px-4 lg:py-3 lg:text-base"
             >
               Hubungi Kami
-            </button>
+            </button> */}
           </div>
         </div>
 
         {/* side:right */}
-        <div className="order-1 flex h-[400px] w-full translate-y-20 items-center justify-center lg:order-2 lg:h-screen lg:w-6/12 lg:-translate-y-10 lg:items-center lg:justify-end">
+        <div className="order-1 flex h-[50vh] w-full translate-y-20 items-center justify-center lg:order-2 lg:h-screen lg:w-6/12 lg:-translate-y-10 lg:items-center lg:justify-end">
           <div className="relative flex h-full w-8/12 items-center justify-center lg:w-7/12">
             <div className="rihgt-0 absolute left-0 mx-auto text-center lg:bottom-0 lg:left-0">
               {/* <span
