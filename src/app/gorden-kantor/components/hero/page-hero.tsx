@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Suspense } from "react";
 import Image from "next/image";
 import ImageHero from "@public/assets/img/hero/61e2fef39d795a620caad1b47461f4b1.jpg";
 import Container from "@/app/components/container";
@@ -50,12 +51,14 @@ const PageHero = ({
             >
               Pelajari Selengkapnya
             </button>
-            <ButtonWA
-              className="overflow-hidden rounded-lg border border-brand-2-200 px-4 py-4 text-center text-sm font-medium text-brand-2-300 hover:bg-brand-2-300 hover:text-white lg:px-4 lg:py-3 lg:text-base"
-              message="Halo IKA Gorden, saya ingin memesan gorden kantor "
-            >
-              Hubungi Kami
-            </ButtonWA>
+            <Suspense>
+              <ButtonWA
+                className="overflow-hidden rounded-lg border border-brand-2-200 px-4 py-4 text-center text-sm font-medium text-brand-2-300 hover:bg-brand-2-300 hover:text-white lg:px-4 lg:py-3 lg:text-base"
+                message="Halo IKA Gorden, saya ingin memesan gorden kantor "
+              >
+                Hubungi Kami
+              </ButtonWA>
+            </Suspense>
             {/* <Link href="" className="overflow-hidden rounded-lg border border-brand-2-200 px-4 py-4 text-center text-sm font-medium text-brand-2-300 hover:bg-brand-2-300 hover:text-white lg:px-4 lg:py-3 lg:text-base">
               Hubungi Kami
             </Link> */}

@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Suspense } from "react";
 import Container from "@components/container";
 import { ButtonWA } from "@components/buttons";
 
@@ -36,12 +37,14 @@ const Contact = ({ id = "contact", className = "" }: Props) => {
           </p>
 
           <div className="w-10/12 xl:w-6/12">
-            <ButtonWA
-              className="overflow-hidden rounded-lg border border-transparent bg-brand-2-200 px-4 py-3 text-center text-base font-medium text-white hover:bg-brand-2-300"
-              message="Halo IKA Gorden, saya ingin memesan gorden kantor. Apakah bener mendapat diskon 5%?"
-            >
-              DAPATKAN DISKONNYA
-            </ButtonWA>
+            <Suspense>
+              <ButtonWA
+                className="overflow-hidden rounded-lg border border-transparent bg-brand-2-200 px-4 py-3 text-center text-base font-medium text-white hover:bg-brand-2-300"
+                message="Halo IKA Gorden, saya ingin memesan gorden kantor. Apakah bener mendapat diskon 5%?"
+              >
+                DAPATKAN DISKONNYA
+              </ButtonWA>
+            </Suspense>
           </div>
         </div>
       </Container>
