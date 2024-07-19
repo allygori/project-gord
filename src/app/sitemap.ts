@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: `https://${HOSTNAME}/gorden-rumah`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
     // {
     //   url: `https://${HOSTNAME}/about`,
     //   lastModified: new Date(),

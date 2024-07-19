@@ -35,10 +35,18 @@ const FooterOne = ({}: Props) => {
           <ul className="m-0 p-0">
             <li>
               <Link
+                href="/gorden-rumah"
+                className="text-xs text-white hover:text-opacity-80 hover:underline md:text-sm"
+              >
+                Gorden Rumah
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/gorden-kantor"
                 className="text-xs text-white hover:text-opacity-80 hover:underline md:text-sm"
               >
-                Pembuatan Gorden Kantor
+                Gorden Kantor
               </Link>
             </li>
           </ul>

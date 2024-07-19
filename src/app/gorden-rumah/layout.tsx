@@ -3,13 +3,13 @@ import { ConfigProvider } from "@app/components/config";
 import { HeaderOne } from "@components/headers";
 import { FooterOne } from "@components/footers";
 
-const SLUG = "gorden-kantor";
+const SLUG = "gorden-rumah";
 const HOSTNAME = process?.env?.NEXT_PUBLIC_HOSTNAME ?? "ikagorden.com";
 
 export const metadata: Metadata = {
-  title: "IKA Gorden - Jasa Pembuatan Gorden Kantor",
+  title: "IKA Gorden - Jasa Pembuatan Gorden Rumah",
   description:
-    "Jasa pembuatan gorden kantor vertical blind, horizontal blind, roller blind, wooden blind dan model lainnya.",
+    "Jasa pembuatan gorden rumah dengan berbagai model, pilihan jenis kain & warna. Tersedia gorden blackout, gorden minimalis, vitrase & lainnya.",
   alternates: {
     canonical: `https://${HOSTNAME}/${SLUG}`,
   },
@@ -19,7 +19,7 @@ type Props = Readonly<{
   children: React.ReactNode;
 }>;
 
-const GordenKantorLayout = ({ children = "" }: Props) => {
+const GordenRumahLayout = ({ children = "" }: Props) => {
   return (
     <>
       {/* header:header-one */}
@@ -34,4 +34,4 @@ const GordenKantorLayout = ({ children = "" }: Props) => {
   );
 };
 
-export default GordenKantorLayout;
+export default GordenRumahLayout;
