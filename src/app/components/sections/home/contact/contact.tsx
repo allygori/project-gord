@@ -31,7 +31,7 @@ const Contact = ({ id = "contact", className = "" }: Props) => {
           <p className="mb-8 text-sm xl:text-base">
             Dapatkan <strong>Diskon 5%</strong> untuk pemesanan pertama di
             wilayah Jabodebtabek. Tunggu apalagi, konsultasikan sekarang.
-            <strong>Gratis!</strong>
+            <strong> Gratis!</strong>
             <br />
             <small className="text-2xs">*Syarat & ketentuan berlaku</small>
           </p>
