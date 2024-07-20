@@ -38,13 +38,11 @@ export const metadata: Metadata = {
   },
 };
 
-type Props = {
-  className?: string;
-};
+type Props = {};
 
-const Page = ({ className = "" }: Props) => {
+const Page = ({}: Props) => {
   return (
-    <main className={clsx("min-h-screen w-full", className)}>
+    <main className={clsx("min-h-screen w-full")}>
       {/* header:title */}
       <header className="mb-0 h-[35vh] w-full bg-brand-200">
         <Container className="flex h-full w-full items-center justify-start px-4 lg:w-6/12">
