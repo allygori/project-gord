@@ -13,28 +13,42 @@ const SLUG = "horizontal-blinds";
 const HOSTNAME = process?.env?.NEXT_PUBLIC_HOSTNAME ?? "ikagorden.com";
 
 export const metadata: Metadata = {
-  title: "IKA Gorden - Horizontal Blinds",
+  title: "Horizontal Blinds",
   description:
     "Tidak hanya sebagai pengatur cahaya, horizontal blind juga digunakan sebagai elemen dekoratif dalam ruangan. Lalu bagaimana cara merawatnya?",
   alternates: {
-    // canonical: `https://${HOSTNAME}/${SLUG}`,
     canonical: SLUG,
   },
+  keywords: ["blind", "horizontal blind", "tirai blind"],
   openGraph: {
     title:
       "Horizontal Blind: Solusi Estetika dan Fungsional untuk Pengaturan Cahaya",
     description:
       "Tidak hanya sebagai pengatur cahaya, horizontal blind juga digunakan sebagai elemen dekoratif dalam ruangan. Lalu bagaimana cara merawatnya?",
     type: "article",
-    url: `https://${HOSTNAME}/${SLUG}`,
-    // images: Image1.src,
-    // alternateLocale:
+    url: `https://${HOSTNAME}/produk/${SLUG}`,
+    images: {
+      url: Image1.src,
+      secureUrl: Image1.src,
+      height: Image1.height,
+      width: Image1.width,
+      type: "image/jpeg",
+      alt: "Horizontal Blind di IKA Gorden",
+    },
   },
   twitter: {
     title:
       "Horizontal Blind: Solusi Estetika dan Fungsional untuk Pengaturan Cahaya",
     description:
       "Tidak hanya sebagai pengatur cahaya, horizontal blind juga digunakan sebagai elemen dekoratif dalam ruangan. Lalu bagaimana cara merawatnya?",
+    images: {
+      url: Image1.src,
+      alt: "Horizontal Blind di IKA Gorden",
+      secureUrl: Image1.src,
+      type: "image/jpeg",
+      width: Image1.width,
+      height: Image1.height,
+    },
   },
 };
 
@@ -58,7 +72,7 @@ const Page = ({}: Props) => {
             <Image src={Image1} alt="Horizontal blinds in living room" />
           </div>
           <p className="mb-2 px-4 text-base font-normal first-letter:float-left first-letter:m-0 first-letter:pr-2 first-letter:text-7xl first-letter:font-bold first-letter:text-brand-100">
-            Horizontal blind atau tirai horizontal adalah salah satu jenis
+            Horizontal blinds atau tirai horizontal adalah salah satu jenis
             penutup jendela yang semakin populer dalam desain interior modern.
             Tirai ini tidak hanya berfungsi sebagai pengatur cahaya, tetapi juga
             sebagai elemen dekoratif yang dapat meningkatkan estetika ruangan.
@@ -69,9 +83,6 @@ const Page = ({}: Props) => {
           <h2 className="my-4 px-4 text-xl font-semibold lg:text-2xl">
             1. Definisi dan Fungsi Horizontal Blind
           </h2>
-          {/* <div className="relative mb-3 w-full">
-            <Image src={Image0} alt="Horizontal blinds in living room" />
-          </div> */}
           <p className="mb-2 px-4 text-base font-normal">
             Horizontal blind adalah jenis penutup jendela yang terdiri dari
             bilah-bilah horisontal yang bisa diatur untuk mengontrol intensitas

@@ -1,40 +1,43 @@
+import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 import Container from "@components/container";
 import Image1 from "@public/assets/img/categories/wooden-blind.jpg";
-// import Image2 from "@public/assets/img/categories/horizontal-blind.jpg";
-// import Image2 from "@public/assets/img/categories/horizontal-blind.webp";
 import Image2 from "@public/assets/img/categories/horizontal-blind.jpg";
-// import Image3 from "@public/assets/img/categories/vertical-blind.jpg";
 import Image3 from "@public/assets/img/categories/cream-vertical-blinds-scaled.jpg";
 import Image4 from "@public/assets/img/categories/roller-blind.jpg";
 import Image5 from "@public/assets/img/categories/gorden-blockout.jpg";
-// import Image5 from "@public/assets/img/categories/gorden-smokring.jpg";
 import Image6 from "@public/assets/img/categories/gorden-rumah-sakit.jpg";
-import clsx from "clsx";
 
 const CATEGORIES = [
   {
     photo: Image1,
+    href: "",
     name: "Wooden Blind",
   },
   {
     photo: Image2,
+    href: "/produk/horizontal-blinds",
     name: "Horizontal Blind",
   },
   {
     photo: Image3,
+    href: "/produk/vertical-blinds",
     name: "Vertical Blind",
   },
   {
     photo: Image4,
+    href: "",
     name: "Roller Blind",
   },
   {
     photo: Image5,
+    href: "",
     name: "Gorden Smokring",
   },
   {
     photo: Image6,
+    href: "",
     name: "Gorden Rumah Sakit",
   },
 ];
@@ -63,16 +66,38 @@ const Category2 = ({ className = "" }: Props) => {
           {CATEGORIES.map((item, idx) => {
             return (
               <li key={idx} className="mb-2 flex w-full flex-col items-center">
-                <div className="relative mb-2 aspect-square h-full w-auto overflow-hidden rounded-lg border-[#e3e4e7] object-contain object-center shadow-md">
-                  <Image
-                    src={item.photo}
-                    alt={item.name}
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <p className="text-base font-medium text-brand-95 md:text-lg">
-                  {item.name}
-                </p>
+                {item.href !== "" ? (
+                  <>
+                    <Link
+                      href={item.href}
+                      className="relative mb-2 aspect-square h-full w-auto overflow-hidden rounded-lg border-[#e3e4e7] object-contain object-center shadow-md"
+                    >
+                      <Image
+                        src={item.photo}
+                        alt={item.name}
+                        style={{ objectFit: "contain" }}
+                      />
+                    </Link>
+                    <Link href={item.href}>
+                      <p className="text-base font-medium text-brand-95 md:text-lg">
+                        {item.name}
+                      </p>
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <div className="relative mb-2 aspect-square h-full w-auto overflow-hidden rounded-lg border-[#e3e4e7] object-contain object-center shadow-md">
+                      <Image
+                        src={item.photo}
+                        alt={item.name}
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
+                    <p className="text-base font-medium text-brand-95 md:text-lg">
+                      {item.name}
+                    </p>
+                  </>
+                )}
               </li>
             );
           })}

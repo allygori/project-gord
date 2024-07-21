@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: `https://${HOSTNAME}/produk/vertical-blinds`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
     // {
     //   url: `https://${HOSTNAME}/about`,
     //   lastModified: new Date(),

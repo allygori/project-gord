@@ -8,7 +8,12 @@ const HOSTNAME = process?.env?.NEXT_PUBLIC_HOSTNAME ?? "ikagorden.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${HOSTNAME}/${SLUG}`),
-  title: "IKA Gorden - Produk",
+  title: {
+    template: "IKA Gorden - %s",
+    default: "IKA Gorden",
+    absolute: "IKA Gorden - Produk",
+  },
+  // title: "IKA Gorden - Produk",
   description:
     "Kami menyediakan berbagai macam produk, seperti gorden blackout, vitrase vertical blind, horizontal blind, roman shades, gorden smokring dan lain-lain.",
   alternates: {
