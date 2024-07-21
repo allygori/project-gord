@@ -41,6 +41,7 @@ export const metadata: Metadata = {
       "Horizontal Blind: Solusi Estetika dan Fungsional untuk Pengaturan Cahaya",
     description:
       "Tidak hanya sebagai pengatur cahaya, horizontal blind juga digunakan sebagai elemen dekoratif dalam ruangan. Lalu bagaimana cara merawatnya?",
+    card: "summary_large_image",
     images: {
       url: Image1.src,
       alt: "Horizontal Blind di IKA Gorden",

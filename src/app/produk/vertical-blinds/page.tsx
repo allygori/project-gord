@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     title: "Vertical Blind: Inovasi Tirai Modern untuk Rumah dan Kantor",
     description:
       "Salah satu keunggulan utama vertical blind adalah fleksibilitasnya dalam mengontrol cahaya. Memilih vertical blind yang tepat memerlukan beberapa pertimbangan.",
+    card: "summary_large_image",
     images: {
       url: Image2.src,
       alt: "Vertical Blind di IKA Gorden",
