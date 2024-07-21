@@ -18,7 +18,6 @@ export const STEPS: Step[] = [
             <p>Waktu survey Senin-Minggu pukul 09.00-17.00 WIB</p>
           </div>
         </li>
-        <li>Proses pembayaran biaya survey sebesar <strong>Rp 100.000</strong> (akan menjadi tambahan DP, jika order disepakati)</li>
       </ol>
     `,
   },
