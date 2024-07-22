@@ -12,6 +12,27 @@ const GA4_ID = process?.env?.NEXT_PUBLIC_GA4_ID ?? "";
 export const metadata: Metadata = {
   title: "IKA Gorden | Gorden Custom Berkualitas & Terjangkau",
   description: "Desain Gorden Sesuai Kebutuhan Rumah atau Kantor Anda",
+  icons: {
+    icon: [
+      {
+        url: "/assets/favicon/favicon.svg",
+        href: "/assets/favicon/favicon.svg",
+        type: "image/svg+xml",
+      },
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/assets/favicon/icon-light.png",
+        href: "/assets/favicon/icon-light.png",
+        type: "image/png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/assets/favicon/icon-dark.png",
+        href: "/assets/favicon/icon-dark.png",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 // export const metadata: Metadata = {

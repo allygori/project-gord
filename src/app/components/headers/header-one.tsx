@@ -28,7 +28,7 @@ const HeaderOne = ({}: Props) => {
 
   return (
     <header
-      className={`dark:border-gray-70 fixed start-0 top-0 z-20 w-full ${
+      className={`fixed start-0 top-0 z-20 w-full ${
         scroll
           ? `animate-fade-in-down border-b border-gray-200 bg-white`
           : "bg-transparent py-4"

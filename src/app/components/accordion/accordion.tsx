@@ -40,7 +40,6 @@ const Accordion = ({ className = "", faqs = [] }: Props) => {
                   "focus:outline-none",
                   "bg-white px-4 py-2 text-left",
                   "inline-flex w-full items-center justify-start",
-                  // "inline-flex w-full items-center justify-between bg-white px-4 py-2 text-left dark:bg-gray-800",
                 )}
               >
                 <div
