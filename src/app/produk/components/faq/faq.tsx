@@ -16,11 +16,11 @@ const Faq = ({ as = "section", className = "" }: Props) => {
   const FAQS2 = FAQS.slice(4, 8);
 
   return (
-    <Component className={clsx("py-4", className)}>
+    <Component className={clsx("px-4 py-4 lg:px-2", className)}>
       <h2 className="mb-6 text-center text-xl font-medium text-brand-100 xl:mb-12 xl:text-3xl">
         FAQ (Pertanyaan Umum)
       </h2>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col justify-between md:flex-row">
         <div className="-mx-4 flex-1">
           <Accordion faqs={FAQS1} />
         </div>

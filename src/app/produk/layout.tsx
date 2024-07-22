@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://${HOSTNAME}/${SLUG}`,
   },
+  openGraph: {
+    url: `https://${HOSTNAME}/${SLUG}`,
+  },
 };
 
 type Props = Readonly<{
