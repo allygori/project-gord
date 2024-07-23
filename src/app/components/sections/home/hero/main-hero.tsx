@@ -6,6 +6,7 @@ import Container from "@/app/components/container";
 import BackgroundImage from "@public/assets/img/hero/ccbe06199649759.6655870ca7846.jpg";
 import { ButtonWA1 } from "@components/buttons";
 import PeopleReview from "./people-review";
+import { EVENT_CONTACT_4_MAIN_HERO_1 } from "@/lib/ads/ga-events";
 
 const MainHero = () => {
   const { header_height } = useContext(ConfigContext) as ConfigContextType;
@@ -52,6 +53,7 @@ const MainHero = () => {
             <ButtonWA1
               className="uppercase"
               message="Halo IKA Gorden, saya ingin memesan gorden dan berkonsultasi mengenai "
+              gtmData={EVENT_CONTACT_4_MAIN_HERO_1}
             >
               KONSULTASI GRATIS
             </ButtonWA1>

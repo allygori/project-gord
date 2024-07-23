@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { Suspense } from "react";
 import Container from "@components/container";
 import { ButtonWA1 } from "@components/buttons";
+import { EVENT_CONTACT_4_CONTACT_1 } from "@lib/ads/ga-events";
 
 type Props = {
   id?: string;
@@ -41,6 +42,7 @@ const Contact = ({ id = "contact", className = "" }: Props) => {
               <ButtonWA1
                 className="uppercase"
                 message="Saya ingin memesan gorden, apakah bener mendapat diskon 5%?"
+                gtmData={EVENT_CONTACT_4_CONTACT_1}
               >
                 DAPATKAN DISKONNYA
               </ButtonWA1>

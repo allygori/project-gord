@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import Container from "@components/container";
 import PortfolioSlide from "./portfolio-slide";
 import { ButtonWA1 } from "@components/buttons";
+import { EVENT_CONTACT_4_PORTFOLIO_1 } from "@lib/ads/ga-events";
 
 const LIST = [
   {
@@ -93,6 +94,7 @@ const Portfolio = ({ className = "" }: Props) => {
               <ButtonWA1
                 className="uppercase"
                 message="Halo, saya tertarik untuk memesan gorden, bagaimana prosesnya?"
+                gtmData={EVENT_CONTACT_4_PORTFOLIO_1}
               >
                 KONSULTASI GRATIS
               </ButtonWA1>

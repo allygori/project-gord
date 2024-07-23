@@ -5,6 +5,7 @@ import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
+import { sendGAEvent } from "@next/third-parties/google";
 import IconWA from "@components/icons/whatsapp-01";
 
 type Props = {
@@ -17,17 +18,25 @@ type Props = {
     icon?: string;
     text?: string;
   };
+  gclidShouldExists?: boolean;
+  gtmData?: {
+    event?: string;
+    value?: Object;
+  };
 };
 
 const ButtonWA1 = ({
   children,
   message = "",
+  gclidShouldExists = true,
+  gtmData,
   className = "",
   classObject,
 }: Props) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [link, setLink] = useState("");
+  const hasGclid = searchParams.has("gclid");
 
   // generate wa number
   useEffect(() => {
@@ -62,6 +71,34 @@ const ButtonWA1 = ({
     classObject?.text ||
     "inline-block text-xs font-semibold text-white md:text-sm lg:text-sm xl:text-base";
 
+  const handleSendGAEvent = (event: React.MouseEvent) => {
+    // only when has gclid & the flag gclidShouldExists = true
+    if (!hasGclid && gclidShouldExists) {
+      return false;
+    }
+
+    if (gtmData?.event) {
+      event.preventDefault();
+
+      const url = event?.currentTarget?.getAttribute("href") || "";
+      const callback = () => {
+        if (typeof url != "undefined") {
+          router.push(url);
+        }
+      };
+
+      sendGAEvent("event", gtmData?.event || "", {
+        ...(gtmData?.value || {}),
+        event_callback: callback,
+        event_timeout: 2000,
+      });
+
+      return true;
+    }
+
+    return false;
+  };
+
   return (
     <Suspense>
       <Link
@@ -75,6 +112,7 @@ const ButtonWA1 = ({
           roundedClass,
           className,
         )}
+        onClick={handleSendGAEvent}
       >
         {/* bg-[#29af3e] */}
         <IconWA className={iconClass} />
