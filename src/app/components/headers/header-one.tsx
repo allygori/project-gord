@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import { useEffect, useState, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,9 +9,11 @@ import Container from "@/app/components/container";
 import Navbar from "@components/navbar";
 import ImageLogo from "@public/assets/img/logo/logo.svg";
 
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-const HeaderOne = ({}: Props) => {
+const HeaderOne = ({ className = "" }: Props) => {
   const { header_height } = useContext(ConfigContext) as ConfigContextType;
   const [scroll, setScroll] = useState(false);
 
@@ -28,11 +31,13 @@ const HeaderOne = ({}: Props) => {
 
   return (
     <header
-      className={`fixed start-0 top-0 z-20 w-full ${
+      className={clsx(
+        "fixed start-0 top-0 z-20 w-full",
+        className,
         scroll
           ? `animate-fade-in-down border-b border-gray-200 bg-white`
-          : "bg-transparent py-4"
-      }`}
+          : "bg-transparent py-4",
+      )}
       style={{ height: header_height }}
     >
       <Container className="mx-auto flex h-full w-11/12 flex-wrap items-center justify-between xl:w-10/12">

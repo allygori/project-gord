@@ -28,10 +28,10 @@ export default function Home() {
   return (
     <>
       {/* header */}
-      <HeaderOne />
+      <HeaderOne className="overflow-x-hidden" />
 
       {/* main */}
-      <main className="min-h-screen w-full">
+      <main className="min-h-screen w-full overflow-x-hidden">
         {/* section:main-hero */}
         <SectionMainHero />
 
@@ -69,7 +69,7 @@ export default function Home() {
       </main>
 
       {/* footer */}
-      <FooterOne />
+      <FooterOne className="overflow-x-hidden" />
     </>
   );
 }

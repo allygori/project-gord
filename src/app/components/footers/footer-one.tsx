@@ -1,15 +1,18 @@
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/app/components/container";
 import ImageLogoWithTextWhite from "@public/assets/img/logo/logo-with-text-white.png";
 
-type Props = {};
+type Props = {
+  className?: string;
+};
 
-const FooterOne = ({}: Props) => {
+const FooterOne = ({ className = "" }: Props) => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="m-0 bg-brand-95">
+    <footer className={clsx("m-0 bg-brand-95", className)}>
       <Container className="flex w-11/12 flex-col bg-brand-95 py-8 xl:w-10/12 xl:flex-row xl:py-12">
         <div className="mb-4 mr-0 w-full xl:mb-0 xl:mr-4 xl:w-5/12">
           {/* <IconLogoWithTextAside className="h-48 w-auto text-white" /> */}
