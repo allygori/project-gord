@@ -15,17 +15,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        rel: "icon",
+        url: "/assets/favicon/favicon.ico",
+        href: "/assets/favicon/favicon.ico",
+      },
+      {
         url: "/assets/favicon/favicon.svg",
         href: "/assets/favicon/favicon.svg",
         type: "image/svg+xml",
         sizes: "any",
       },
-      {
-        rel: "alternate icon",
-        url: "/assets/favicon/favicon.ico",
-        href: "/assets/favicon/favicon.ico",
-        sizes: "48x48",
-      },
+      // {
+      //   rel: "alternate icon",
+      //   url: "/assets/favicon/favicon.ico",
+      //   href: "/assets/favicon/favicon.ico",
+      //   sizes: "48x48",
+      // },
       {
         url: "/assets/favicon/icon.png",
         href: "/assets/favicon/icon.png",
